@@ -9,7 +9,11 @@
 <body>
     <div class="container" id="main-container">
         <img src="images/logo.png" type="image/png" class="main-element" id="search-logo"/>
-        <input type="text" placeholder="Repository" name="query" class="main-element" id="search-bar" autofocus/>
+        <form action="/search" method="GET" class="main-element" id="search-form">
+            <input type="text" placeholder="Repository" name="query" class="form-element" id="search-bar" autofocus/>
+        </form>
     </div>
+    <p id="footnote">BUILT WITH 🤍 BY KSSBro</p>
+    <script src="js/indexPage.js"/>
 </body>
 </html>
