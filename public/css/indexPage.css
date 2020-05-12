@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #1A1E22;
+}
+
+*:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+#main-container {
+    position: relative;
+    height: 200px;
+    width: 700px;
+    margin: 250px auto;
+}
+
+#search-logo {
+    height: 50px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+#search-bar {
+    position: relative;
+    margin: auto;
+    width: 650px;
+    height: 60px;
+    background: #2F353C;
+    border: 0px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#search-bar::placeholder{ 
+    color: #9F9F9F;
+}
