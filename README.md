@@ -1,1 +1,2 @@
-# gitfetch
+# gitwiz
+
