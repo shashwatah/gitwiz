@@ -28,6 +28,13 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/search", (req, res) => {
+    res.status(200).render("searchPage", {
+        query: req.query.query,
+        layout: false
+    });
+});
+
 app.listen(process.env.PORT, () => {
     console.log(`GitWiz is running on port ${process.env.PORT}`);
 });
