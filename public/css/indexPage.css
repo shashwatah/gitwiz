@@ -15,7 +15,7 @@ body {
 #main-container {
     position: relative;
     height: 200px;
-    width: 700px;
+    width: 600px;
     margin: 250px auto;
 }
 
@@ -28,7 +28,7 @@ body {
 #search-bar {
     position: relative;
     margin: auto;
-    width: 650px;
+    width: 550px;
     height: 60px;
     background: #2F353C;
     border: 0px;
