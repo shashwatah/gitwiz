@@ -4,8 +4,9 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon src/app.js",
-    "start": "node src/app.js"
+    "dev": "nodemon ts-node src/app.ts",
+    "build": "tsc -p .",
+    "start": "npm run build && node start build/app.js"
   },
   "repository": {
     "type": "git",
@@ -27,11 +28,19 @@
     "helmet": "^3.22.0",
     "mongoose": "^5.9.13",
     "morgan": "^1.10.0",
-    "node-fetch": "^2.6.0",
     "npm": "^6.14.5"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.6",
+    "@types/express-handlebars": "^3.1.0",
+    "@types/helmet": "0.0.47",
+    "@types/morgan": "^1.9.0",
+    "@types/node": "^14.0.1",
     "jest": "^26.0.1",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
   }
 }
