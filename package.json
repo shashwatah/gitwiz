@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "dev": "nodemon ts-node src/app.ts",
-    "build": "tsc -p .",
+    "dev": "nodemon",
+    "build": "tsc",
     "start": "npm run build && node start build/app.js"
   },
   "repository": {
