@@ -7,7 +7,14 @@
     <link rel="shortcut icon" href="images/icon.png" type="image/png"/>
 </head>
 <body>
-    Search Page
+    <div class="container" id="topbar">
+        <div class="container" id="topbar-element-container">
+            <img class="logo topbar-element" id="topbar-logo" src="images/logo.png" type="image/png"/>
+            <form action="/search" method="GET" class="topbar-element" id="search-form">
+                <input type="text" value="{{query}}" name="query" class="form-element" id="search-bar"/>
+            </form>
+        </div>
+    </div>
     <script>const query=`{{query}}`</script>
     <script src="js/searchPage.js"></script>
 </body>
