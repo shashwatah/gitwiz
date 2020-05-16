@@ -1,4 +1,5 @@
-import * as dotenv from "dotenv";
+import { PORT } from './utils/env';
+
 import express from "express";
 import * as bodyParser from "body-parser";
 import * as exphbs from "express-handlebars";
@@ -6,10 +7,6 @@ import helmet from "helmet";
 import morgan from "morgan";
 import cors from "cors";
 import path from "path";
-
-dotenv.config();
-const envPath: string = `${__dirname}/../.env`;
-dotenv.config({ path: envPath });
 
 var hbs = exphbs.create({});
 
@@ -40,8 +37,8 @@ app.get("/search", (req: express.Request, res: express.Response) => {
     });
 });
 
-app.listen(process.env.PORT, () => {
-    return console.log(`GitWiz is running on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+    return console.log(`GitWiz is running on port ${PORT}`);
 }); 
 
 
