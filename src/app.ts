@@ -1,5 +1,3 @@
-import { PORT } from './utils/env';
-
 import express from "express";
 import * as bodyParser from "body-parser";
 import * as exphbs from "express-handlebars";
@@ -8,7 +6,7 @@ import morgan from "morgan";
 import cors from "cors";
 import path from "path";
 
-var hbs = exphbs.create({});
+import { PORT } from './utils/env';
 
 const app: express.Application = express();
 
@@ -21,6 +19,7 @@ app.use(morgan("common"));
 app.use(helmet());
 app.use(cors());
 
+const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
