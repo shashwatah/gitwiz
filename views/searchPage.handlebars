@@ -11,8 +11,49 @@
         <div class="container" id="topbar-element-container">
             <img class="logo topbar-element" id="topbar-logo" src="images/logo.png" type="image/png"/>
             <form action="/search" method="GET" class="topbar-element" id="search-form">
-                <input type="text" value="{{query}}" name="query" class="form-element" id="search-bar"/>
+                <input type="text" value="{{query}}" placeholder="Repository" name="query" class="form-element" id="search-bar"/>
             </form>
+        </div>
+    </div>
+    <div class="container" id="title-container">
+        <p class="title" id="results-query-title">{{query}}</p>
+        <p id="res-count">1001 Results</p>
+    </div>
+    <div class="container" id="result-container">
+        <div class="result">
+            <p class="result-element res-title">instahunter</p>
+            <p class="result-element res-sub">https://github.com/KSSBro/instahunter</p>
+            <p class="result-element res-desc">Instahunter is a CLI app that can fetch posts, user data and search results from Instagram's Frontend API.</p>
+            <div class="result-element res-tag-container"></div>
+            <button class="res-tag">PYTHON</button>
+            <button class="res-tag">MIT</button>
+            <button class="res-tag">v1.6.1</button>
+            <button class="res-tag">INSTAGRAM</button>
+        </div>
+        <div class="result">
+            <p class="result-element res-title">orion</p>
+            <p class="result-element res-sub">https://github.com/KSSBro/orion</p>
+            <p class="result-element res-desc">Orion is an Open-Source Search Engine for social networking websites, built with Node.js.</p>
+        </div>
+        <div class="result">
+            <p class="result-element res-title">wiscro</p>
+            <p class="result-element res-sub">https://github.com/KSSBro/wiscro</p>
+            <p class="result-element res-desc">A Q&A web-app made with Node.js, Express, MongoDB, Mongoose, Handlebars and JQuery.</p>
+        </div>
+        <div class="result">
+            <p class="result-element res-title">unicode</p>
+            <p class="result-element res-sub">https://github.com/KSSBro/unicode</p>
+            <p class="result-element res-desc">A real-time code editor/sandbox web app, built with HTML, CSS, JavaScript and JQuery.</p>
+        </div>
+        <div class="result">
+            <p class="result-element res-title">blogup</p>
+            <p class="result-element res-sub">https://github.com/KSSBro/blogup</p>
+            <p class="result-element res-desc">ABlogup is a platform for bloggers and blog readers, built with Node.js, Express and MongoDB(Mongoose).</p>
+        </div>  
+        <div class="result">
+            <p class="result-element res-title">instahunter</p>
+            <p class="result-element res-sub">https://github.com/KSSBro/instahunter</p>
+            <p class="result-element res-desc">Instahunter is a CLI app that can fetch posts, user data and search results from Instagram's Frontend API.</p>
         </div>
     </div>
     <script>const query=`{{query}}`</script>

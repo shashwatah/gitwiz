@@ -1,9 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Roboto&display=swap');
+
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: white;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #1A1E22;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    display: none;
+}
 
 body {
     margin: 0px;
     padding: 0px;
-    text-align: center;
     background: #F6F8FA;
 }
 
@@ -15,16 +30,24 @@ body {
 
 #topbar {
     position: relative;
-    height: 75px;
-    width: 100%;
+    height: 85px;
+    width: 75%;
+    margin: 15px auto 0px auto;
+    border: 0px;
+    border-radius: 2px;
+    /* width: 100%;
+    margin: 0px auto;
+    border: 0px;
+    border-radius: 0px; */
     background: #1A1E22;
-    text-align: center;
+    /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 #topbar-element-container {
     position: relative;
     height: 100%;
-    width: 850px;
+    width: 780px;
     margin: auto;
 }
 
@@ -32,22 +55,114 @@ body {
     position: relative;
     height: 30px;
     float: left;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 #search-bar {
     position: relative;
     float: left;
-    width: 700px;
+    width: 650px;
     margin-left: 10px;
     height: 45px;
-    margin-top: 15px;
-    background: #2F353C;
+    margin-top: 20px;
+    background: #3A424A;
     border: 0px;
     color: white;
     border-radius: 5px;
     font-size: 16px;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
     padding-left: 15px;
     padding-right: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+#title-container {
+    position: relative;
+    height: 70px;
+    width: 75%;
+    margin: 25px auto;
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+#results-query-title {
+    position: relative;
+    margin: 0px;
+    margin-top: 4px;
+    padding: 0px;
+    font-size: 45px;
+    font-family: "Assistant", sans-serif;
+    font-weight: bolder;
+    font-weight: bolder;
+    color: #3A424A;
+    float: left;
+}
+
+#res-count {
+    margin: 0px;
+    margin-top: 19px;
+    padding: 0px;
+    position: relative;
+    font-family: "Assistant", sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    float: right;
+    color: #3A424A;
+}
+
+#result-container {
+    clear: both;
+    position: relative;
+    height: auto;
+    width: 75%;
+    margin: 25px auto;
+}
+
+.result {
+    position: relative;
+    padding: 20px;
+    height: auto;
+    width: calc(100% - 40px);
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
+    color: black;
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 2px;
+    /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
+    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.result-element {
+    margin: 0px;
+    margin-top: 8px;
+}
+
+.res-title {
+    font-size: 26px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.res-sub {
+    font-family: "Roboto", sans-serif;
+    color: grey;
+    font-size: 16px;
+}
+
+.res-desc {
+    font-size: 18px;
+}
+
+.res-tag {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    height: 20px;
+    min-width: 40px;
+    font-size: 12px;
+    color: white;
+    background: #1A1E22;
+    border: 0px;
+    cursor: default;
+    border-radius: 3px;
 }

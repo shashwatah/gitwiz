@@ -42,9 +42,10 @@ body {
     color: white;
     border-radius: 5px;
     font-size: 20px;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
     padding-left: 25px;
     padding-right: 25px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 #search-bar::placeholder{ 
@@ -55,7 +56,7 @@ body {
     position: relative;
     margin: auto;
     bottom: 10px;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
     color: white;
     font-size: 16px;
 }
