@@ -34,13 +34,8 @@ body {
     width: 75%;
     margin: 15px auto 0px auto;
     border: 0px;
-    border-radius: 2px;
-    /* width: 100%;
-    margin: 0px auto;
-    border: 0px;
-    border-radius: 0px; */
+    border-radius: 4px;
     background: #1A1E22;
-    /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -68,7 +63,7 @@ body {
     background: #3A424A;
     border: 0px;
     color: white;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
     padding-left: 15px;
@@ -122,15 +117,31 @@ body {
     position: relative;
     padding: 20px;
     height: auto;
-    width: calc(100% - 40px);
+    width: calc(100% - 40px);   
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
     color: black;
     margin-bottom: 40px;
     background: white;
-    border-radius: 2px;
-    /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
-    /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+    border-radius: 4px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+
+.result:hover {
+    background: #1A1E22;
+}
+
+.result:hover .res-title {
+    color: white;
+}
+
+.result:hover .res-desc{
+    color: white;
+}
+
+.result:hover .res-tag {
+    color: black;
+    background: white;
 }
 
 .result-element {
@@ -141,7 +152,6 @@ body {
 .res-title {
     font-size: 26px;
     margin: 0px;
-    cursor: pointer;
 }
 
 .res-sub {
@@ -164,5 +174,5 @@ body {
     background: #1A1E22;
     border: 0px;
     cursor: default;
-    border-radius: 3px;
+    border-radius: 1px;
 }

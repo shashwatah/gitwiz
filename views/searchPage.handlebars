@@ -9,7 +9,7 @@
 <body>
     <div class="container" id="topbar">
         <div class="container" id="topbar-element-container">
-            <img class="logo topbar-element" id="topbar-logo" src="images/logo.png" type="image/png"/>
+            <a href="/"><img class="logo topbar-element" id="topbar-logo" src="images/logo.png" type="image/png" ondragstart="return false;"/></a>
             <form action="/search" method="GET" class="topbar-element" id="search-form">
                 <input type="text" value="{{query}}" placeholder="Repository" name="query" class="form-element" id="search-bar"/>
             </form>
@@ -24,11 +24,12 @@
             <p class="result-element res-title">instahunter</p>
             <p class="result-element res-sub">https://github.com/KSSBro/instahunter</p>
             <p class="result-element res-desc">Instahunter is a CLI app that can fetch posts, user data and search results from Instagram's Frontend API.</p>
-            <div class="result-element res-tag-container"></div>
-            <button class="res-tag">PYTHON</button>
-            <button class="res-tag">MIT</button>
-            <button class="res-tag">v1.6.1</button>
-            <button class="res-tag">INSTAGRAM</button>
+            <div class="result-element res-tag-container">
+                <button class="res-tag">PYTHON</button>
+                <button class="res-tag">MIT</button>
+                <button class="res-tag">v1.6.1</button>
+                <button class="res-tag">INSTAGRAM</button>
+            </div>
         </div>
         <div class="result">
             <p class="result-element res-title">orion</p>
