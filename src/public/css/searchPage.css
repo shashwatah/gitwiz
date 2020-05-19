@@ -29,14 +29,25 @@ body {
 
 
 #topbar {
-    position: relative;
+    z-index: 1;
     height: 85px;
-    width: 75%;
-    margin: 15px auto 0px auto;
     border: 0px;
-    border-radius: 4px;
-    background: #1A1E22;
+    background: #24292E;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.topbar-noscroll {
+    position: relative;
+    width: 75%;
+    margin: 25px auto 0px auto;
+    border-radius: 4px;
+}
+
+.topbar-scroll {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border-radius: 0px;
 }
 
 #topbar-el-container {
