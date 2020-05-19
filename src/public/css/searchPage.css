@@ -73,9 +73,9 @@ body {
 
 #title-container {
     position: relative;
-    height: 70px;
+    height: 75px;
     width: 75%;
-    margin: 25px auto;
+    margin: 50px auto;
     margin-bottom: 15px;
     border-bottom: 1px solid lightgrey;
 }
@@ -83,9 +83,9 @@ body {
 #results-query-title {
     position: relative;
     margin: 0px;
-    margin-top: 4px;
+    margin-top: -2px;
     padding: 0px;
-    font-size: 45px;
+    font-size: 50px;
     font-family: "Assistant", sans-serif;
     font-weight: bolder;
     font-weight: bolder;
@@ -110,7 +110,7 @@ body {
     position: relative;
     height: auto;
     width: 75%;
-    margin: 25px auto;
+    margin: 30px auto;
 }
 
 .result {
