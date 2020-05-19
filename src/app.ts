@@ -8,6 +8,8 @@ import path from "path";
 
 import { PORT } from './utils/env';
 
+import router from './routes/mainRoute';
+
 const app: express.Application = express();
 
 app.use(express.static(path.join(__dirname, "/public")));
@@ -23,18 +25,7 @@ const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.get("/", (req: express.Request, res: express.Response) => {
-    res.status(200).render("indexPage", {
-        layout: false
-    });
-});
-
-app.get("/search", (req: express.Request, res: express.Response) => {
-    res.status(200).render("searchPage", {
-        query: req.query.query,
-        layout: false
-    });
-});
+app.use(router);
 
 app.listen(PORT, () => {
     return console.log(`GitWiz is running on port ${PORT}`);
