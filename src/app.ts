@@ -8,7 +8,7 @@ import path from "path";
 
 import { PORT } from './utils/env';
 
-import router from './routes/mainRoute';
+import router from './routes/main.route';
 
 const app: express.Application = express();
 

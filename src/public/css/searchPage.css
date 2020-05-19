@@ -39,7 +39,7 @@ body {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
-#topbar-element-container {
+#topbar-el-container {
     position: relative;
     height: 100%;
     width: 780px;
@@ -71,7 +71,7 @@ body {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-#title-container {
+#query-info-container {
     position: relative;
     height: 75px;
     width: 75%;
@@ -80,7 +80,7 @@ body {
     border-bottom: 1px solid lightgrey;
 }
 
-#results-query-title {
+#query-title {
     position: relative;
     margin: 0px;
     margin-top: -2px;
@@ -93,7 +93,7 @@ body {
     float: left;
 }
 
-#res-count {
+#query-res-count {
     margin: 0px;
     margin-top: 19px;
     padding: 0px;
@@ -105,7 +105,7 @@ body {
     color: #3A424A;
 }
 
-#result-container {
+#res-container {
     clear: both;
     position: relative;
     height: auto;
@@ -113,7 +113,7 @@ body {
     margin: 30px auto;
 }
 
-.result {
+.res {
     position: relative;
     padding: 20px;
     height: auto;
@@ -127,25 +127,39 @@ body {
     cursor: pointer;
 }
 
-.result:hover {
+.res:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
 }
 
-/* .result:hover {
-    background: #1A1E22;
-}
-
-.result:hover .res-title {
-    color: white;
-}
-
-.result:hover .res-desc{
-    color: white;
-} */
-
-.result-element {
+.res-el {
     margin: 0px;
-    margin-top: 8px;
+    margin-top: 10px;
+}
+
+.res-tag {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    height: 25px;
+    min-width: 40px;
+    cursor: default;
+    border-radius: 2px;
+    border: 0px;
+}
+
+.res-pf-tag {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+.res-gh-tag {
+    background: #1A1E22;
+    color: white;
+}
+
+.res-gl-tag {
+    background: #fa7035;
+    color: white;
 }
 
 .res-title {
@@ -163,15 +177,18 @@ body {
     font-size: 18px;
 }
 
-.res-tag {
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    height: 20px;
-    min-width: 40px;
-    font-size: 12px;
-    color: black;
+.res-data-tag-container {
+    position: relative;
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.res-data-tag {
     background: #EBEBEB;
-    border: 0px;
-    cursor: default;
-    border-radius: 1px;
+    color: black;
+    margin-right: 10px;
+    font-size: 12px;    
 }
