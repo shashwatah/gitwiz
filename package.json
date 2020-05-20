@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/KSSBro/gitwiz#readme",
   "dependencies": {
-    "apollo-fetch": "^0.7.0",
+    "@types/node-fetch": "^2.5.7",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -28,6 +28,7 @@
     "helmet": "^3.22.0",
     "mongoose": "^5.9.13",
     "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
     "npm": "^6.14.5"
   },
   "devDependencies": {

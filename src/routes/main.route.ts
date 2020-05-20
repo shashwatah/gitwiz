@@ -1,8 +1,5 @@
 import express from "express";
 
-import { PORT } from '../utils/env';
-import { controller } from '../controllers/main.controller'
-
 const router: express.Router = express.Router();
 
 router.get("/", (req: express.Request, res: express.Response) => {
