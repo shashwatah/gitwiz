@@ -194,7 +194,16 @@ body {
     color: white;
 }
 
-.res-title {
+.res-link {
+    text-decoration: none;
+}
+
+.res-link:hover .res-title {
+    text-decoration: underline;
+}
+
+.res-link .res-title {
+    color: #1A1E22;
     font-size: 26px;
     margin: 0px;
 }
@@ -205,8 +214,13 @@ body {
     font-size: 16px;
 }
 
+.res-sub-dot {
+    font-weight: bold;
+}
+
 .res-sub-link a {
     color: grey;
+    text-decoration: none;
 }
 
 .res-sub-link:hover a {
