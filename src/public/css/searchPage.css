@@ -27,6 +27,27 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+@keyframes fadein {
+  from {
+    bottom: -40px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 0px;
+    opacity: 1;
+  }
+  to {
+    bottom: -40px;
+    opacity: 0;
+  }
+}
 
 #topbar {
     z-index: 1;
@@ -89,6 +110,7 @@ body {
     margin: 50px auto;
     margin-bottom: 15px;
     border-bottom: 1px solid lightgrey;
+    display: none;
 }
 
 #query-title {
@@ -204,3 +226,35 @@ body {
     font-size: 14px; 
     margin-top: 10px;   
 }
+
+#snackbar {
+  position: relative;
+  background-color: #24292E;
+  position: fixed;
+  bottom: 25px;
+  width: 75%;
+  height: 60px;
+  border-radius: 4px;
+  text-align: center;
+  visibility: hidden;
+  transform: translateZ(0);
+  left: 50%;
+  margin-left: -37.5%;
+}
+
+#snackbar p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  line-height: 100%;
+  font-size: 15px;
+  color: white;
+  transform: translateZ(0);
+  /* margin-left: 100px; */
+  margin-top: 25px;
+}
+
+.snackbar-visible {
+  visibility: visible !important;
+  animation: fadein 0.5s, fadeout 0.5s 2s;
+  transform: translateZ(0);
+}  

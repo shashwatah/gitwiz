@@ -65,11 +65,14 @@ export default class GithubController {
             this.queryController.fetchData(`query { rateLimit { cost remaining resetAt } search(query: \"${this.query}\", type: REPOSITORY, first: 100) { repositoryCount edges { node { ... on Repository { name nameWithOwner url homepageUrl description parent { nameWithOwner } languages(first: 5) { nodes { name } } releases(first: 1) { nodes { tagName } } forkCount stargazers { totalCount } diskUsage createdAt repositoryTopics(first:5) { nodes { topic { name } } } } } } } }`)
             .then((response: QueryData) => {
                 if(response.data?.search.edges) {
-                    resolve(response.data?.search.edges);
-                } else if(response.data?.search.edges.length === 0) {
-                    reject("GithubControllerError: Query returned 0 results");
+                    if(response.data?.search.edges.length === 0) {
+                        console.log("Hit");
+                        throw new Error("GithubControllerError/makeQuery(): Query returned 0 results");    
+                    } else {
+                        resolve(response.data?.search.edges);
+                    }
                 } else {
-                    reject("GithubControllerError: GitHub Error");
+                    throw new Error("GithubControllerError/makeQuery(): GitHub Error");
                 }
             })
             .catch((error: string) => {
@@ -110,8 +113,10 @@ export default class GithubController {
                             });
                         }
                     });
+                    resolve(processedData);
+                } else {
+                    reject("GithubControllerError/processData(): makeQuery() response was undefined");
                 }
-                resolve(processedData);
             }).catch(err => {
                 reject(err);
             });

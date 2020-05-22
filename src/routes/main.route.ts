@@ -22,7 +22,9 @@ router.post("/fetch", async (req: express.Request, res: express.Response) => {
     console.log(req.body.query);
     const controller: GithubController = new GithubController(req.body.query, `${GITHUB_TOKEN}`);
     await controller.processData().then(data => res.status(200).send(data))
-    .catch(err => res.status(500).send(err));
+    .catch(err => {
+        res.status(500).send("Query returned 0 results")
+    });
 });
 
 export default router;

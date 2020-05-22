@@ -35,9 +35,9 @@ export default class QueryController {
                     }
                     resolve(queryData);
                 } else if(response.errors[0]) {
-                    throw new Error(`QueryError: ${response.errors[0].message}`);
+                    throw new Error(`QueryControllerError/fetchData(): ${response.errors[0].message}`);
                 } else {
-                    throw new Error("QueryError: Error retrieving data");
+                    throw new Error("QueryControllerError/fetchData(): Error retrieving data");
                 }
             }).catch(error => {
                 reject(error);

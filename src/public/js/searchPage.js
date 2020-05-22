@@ -8,7 +8,8 @@ $(window).on('scroll',function(){
     }
 });
 
-const resContainer = document.getElementById("res-container")
+const resContainer = document.getElementById("res-container");
+const queryInfoContainer = document.getElementById("query-info-container");
 const resCount = document.getElementById("query-res-count");
 
 $.ajax({
@@ -19,8 +20,14 @@ $.ajax({
     },
     success: function(data) {
         resCount.innerHTML = `${data.length} Result${data.length > 1 ? "s" : ""}`;
+        queryInfoContainer.style.display ="block";
         for(const currentChunk of data) {
             resContainer.innerHTML += currentChunk.htmlString;
         }
+        console.log(data);
+    },
+    error: function(err) {
+      resContainer.innerHTML = "";
+      snackbarController(err.responseText);
     }
-})
+});
