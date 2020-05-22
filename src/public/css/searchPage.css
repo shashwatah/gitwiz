@@ -150,7 +150,7 @@ body {
 .res-tag {
     font-family: "Roboto", sans-serif;
     font-weight: bold;
-    height: 25px;
+    height: 28px;
     min-width: 40px;
     cursor: default;
     border-radius: 2px;
@@ -201,5 +201,5 @@ body {
     background: #EBEBEB;
     color: black;
     margin-right: 10px;
-    font-size: 12px;    
+    font-size: 14px;    
 }

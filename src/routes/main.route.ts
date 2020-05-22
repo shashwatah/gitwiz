@@ -21,8 +21,7 @@ router.get("/search", (req: express.Request, res: express.Response) => {
 router.post("/fetch", async (req: express.Request, res: express.Response) => {
     console.log(req.body.query);
     const controller: GithubController = new GithubController(req.body.query, `${GITHUB_TOKEN}`);
-    var data = await controller.processData()
-    .then(data => res.status(200).send(data))
+    await controller.processData().then(data => res.status(200).send(data))
     .catch(err => res.status(500).send(err));
 });
 

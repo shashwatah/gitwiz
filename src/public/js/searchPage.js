@@ -20,7 +20,7 @@ $.ajax({
     success: function(data) {
         container.innerHTML = "";
         for(const chunk of data) {
-            console.log(chunk);
+            // console.log(chunk);
             container.innerHTML += chunk.htmlString;
         }
     }
