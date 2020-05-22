@@ -7,3 +7,21 @@ $(window).on('scroll',function(){
         $("#topbar").addClass("topbar-noscroll");
     }
 });
+
+const container = document.getElementById("res-container")
+
+
+$.ajax({
+    method: "POST",
+    url: "/fetch",
+    data: {
+        query: query
+    },
+    success: function(data) {
+        container.innerHTML = "";
+        for(const chunk of data) {
+            console.log(chunk);
+            container.innerHTML += chunk.htmlString;
+        }
+    }
+})

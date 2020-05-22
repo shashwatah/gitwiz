@@ -6,7 +6,7 @@ import morgan from "morgan";
 import cors from "cors";
 import path from "path";
 
-import { PORT } from './utils/env';
+import { PORT, MORGAN_METHOD } from './utils/env';
 
 import router from './routes/main.route';
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json());
-app.use(morgan("common"));
+app.use(morgan(`${MORGAN_METHOD}`));
 app.use(helmet());
 app.use(cors());
 

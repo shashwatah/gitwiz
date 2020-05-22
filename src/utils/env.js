@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+exports.GITHUB_TOKEN = exports.GITLAB_TOKEN = exports.MORGAN_METHOD = exports.PORT = void 0;
+var dotenv = require("dotenv");
+dotenv.config();
+var envPath = __dirname + "/../../.env";
+dotenv.config({ path: envPath });
+exports.PORT = process.env.PORT;
+exports.MORGAN_METHOD = process.env.MORGAN_METHOD;
+exports.GITLAB_TOKEN = process.env.GITLAB_TOKEN;
+exports.GITHUB_TOKEN = process.env.GITHUB_TOKEN;

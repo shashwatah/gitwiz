@@ -36,6 +36,7 @@ export default class QueryController {
                     resolve(data);
                 } else {
                     throw new Error("Error retrieving data");
+                    // throw new Error(response.errors[0].message);
                 }
             }).catch(error => {
                 reject(error);

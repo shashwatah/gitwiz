@@ -12,7 +12,6 @@ export default class GitlabController {
         this.url = "https://gitlab.com/api/graphql";
         this.query = query;
         this.token = token;
-
         this.queryController = new QueryController(this.url, this.token);
     }
 
