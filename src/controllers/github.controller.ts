@@ -88,6 +88,7 @@ export default class GithubController {
                 if(response !== undefined) {
                     response.forEach((edge: DataEdge) => {
                         if(!edge.node.parent?.nameWithOwner) {
+                            edge.node.parent ? console.log(parent) : true;
                             let repoTopicTags: string = "";
                             if(edge.node.repositoryTopics.nodes.length > 0) {
                                 for(const repoTopic of edge.node.repositoryTopics.nodes) {
@@ -100,7 +101,7 @@ export default class GithubController {
                                 `<div class="res">
                                     <button class="res-el res-tag res-pf-tag res-gh-tag">GitHub</button>
                                     <p class="res-el res-title">${edge.node.name}</p>
-                                    <p class="res-el res-sub">${edge.node.nameWithOwner} > ${edge.node.url}</p>
+                                    <p class="res-el res-sub">${edge.node.nameWithOwner} · <span class="res-sub-link"><a href="${edge.node.url}">${edge.node.url}</a></span>${edge.node.homepageUrl ? ` · <span class="res-sub-link"><a href="${edge.node.homepageUrl}">${edge.node.homepageUrl}</a></span>` : ""}</p>
                                     ${edge.node.description ? `<p class="res-el res-desc">${edge.node.description}</p>` : ""}
                                     <div class="res-data-tag-container">
                                         ${edge.node.languages.nodes[0] ? `<button class="res-tag res-data-tag">${edge.node.languages.nodes[0].name.toUpperCase()}</button>` : ""}
