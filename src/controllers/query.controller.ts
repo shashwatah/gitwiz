@@ -1,5 +1,10 @@
 import fetch from "node-fetch";
 
+interface QueryData {
+    message: string,
+    data: object
+};
+
 export default class QueryController {
     private url: string;
     private token: string;
@@ -10,11 +15,6 @@ export default class QueryController {
     }
 
     fetchData(queryString: string): Promise<object>{
-        interface Success {
-            message: string,
-            data: object
-        };
-
         return new Promise(async (resolve, reject) => {
             await fetch(this.url, {
                 method: 'POST',
@@ -29,14 +29,15 @@ export default class QueryController {
             .then(async response => await response.json())
             .then(response => {
                 if(response.data) {
-                    const data: Success = {
+                    const queryData: QueryData = {
                         message: "success",
                         data: response.data
                     }
-                    resolve(data);
+                    resolve(queryData);
+                } else if(response.errors[0]) {
+                    throw new Error(`QueryError: ${response.errors[0].message}`);
                 } else {
-                    throw new Error("Error retrieving data");
-                    // throw new Error(response.errors[0].message);
+                    throw new Error("QueryError: Error retrieving data");
                 }
             }).catch(error => {
                 reject(error);

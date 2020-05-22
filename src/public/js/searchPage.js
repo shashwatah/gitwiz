@@ -8,8 +8,8 @@ $(window).on('scroll',function(){
     }
 });
 
-const container = document.getElementById("res-container")
-
+const resContainer = document.getElementById("res-container")
+const resCount = document.getElementById("query-res-count");
 
 $.ajax({
     method: "POST",
@@ -18,10 +18,9 @@ $.ajax({
         query: query
     },
     success: function(data) {
-        container.innerHTML = "";
-        for(const chunk of data) {
-            // console.log(chunk);
-            container.innerHTML += chunk.htmlString;
+        resCount.innerHTML = `${data.length} Result${data.length > 1 ? "s" : ""}`;
+        for(const currentChunk of data) {
+            resContainer.innerHTML += currentChunk.htmlString;
         }
     }
 })

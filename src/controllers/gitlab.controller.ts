@@ -39,3 +39,10 @@ export default class GitlabController {
 
 // const controller = new GitlabController("flight", `${GITLAB_TOKEN}`);
 // controller.makeQuery().then(res => console.log(res)).catch(err => console.log(err));
+
+// <div class="res">
+//             <button class="res-el res-tag res-pf-tag res-gl-tag">GitLab</button>
+//             <p class="res-el res-title">orion</p>
+//             <p class="res-el res-sub">KSSBro/orion > https://github.com/KSSBro/orion</p>
+//             <p class="res-el res-desc">Orion is an Open-Source Search Engine for social networking websites, built with Node.js.</p>
+//         </div>

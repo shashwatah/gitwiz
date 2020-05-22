@@ -191,7 +191,7 @@ body {
 .res-data-tag-container {
     position: relative;
     height: auto;
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -201,5 +201,6 @@ body {
     background: #EBEBEB;
     color: black;
     margin-right: 10px;
-    font-size: 14px;    
+    font-size: 14px; 
+    margin-top: 10px;   
 }
