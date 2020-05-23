@@ -87,7 +87,8 @@ export default class GitlabController {
                     reject("GithubControllerError/processData(): makeQuery() response was undefined");
                 }
             }).catch(error => {
-                reject(error);
+                console.log(error.message);
+                resolve([]);
             })
         });
     }

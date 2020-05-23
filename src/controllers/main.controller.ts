@@ -2,7 +2,8 @@ import { GITHUB_TOKEN, GITLAB_TOKEN } from "./../utils/env";
 
 import GithubController from './github.controller';
 import GitlabController from './gitlab.controller';
-import { rejects } from "assert";
+
+import { shuffleArray } from './../utils/shuffleArray';
 
 export default class MainController {
     private query: string;
@@ -22,7 +23,13 @@ export default class MainController {
                this.gitlabController.processData()
            ]);
 
-           resolve(githubResults.concat(gitlabResults));
+           const resultArray: Array<object> = githubResults.slice(0,20).concat(shuffleArray(githubResults.slice(20).concat(gitlabResults)));
+           if(resultArray.length > 0) {
+               resolve(resultArray);
+           } else {
+               reject("MainQueryController/getResults(): Query returned 0 results");
+           }
+           resolve(resultArray);
         });
     }
 }

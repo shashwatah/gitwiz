@@ -87,7 +87,6 @@ export default class GithubController {
                 if(response !== undefined) {
                     response.forEach((edge: DataEdge) => {
                         if(!edge.node.parent?.nameWithOwner) {
-                            // edge.node.parent ? console.log(parent) : true;
                             let repoTopicTags: string = "";
                             if(edge.node.repositoryTopics.nodes.length > 0) {
                                 for(const repoTopic of edge.node.repositoryTopics.nodes) {
@@ -120,8 +119,9 @@ export default class GithubController {
                 } else {
                     reject("GithubControllerError/processData(): makeQuery() response was undefined");
                 }
-            }).catch(error => {
-                reject(error);
+            }).catch(error => { 
+                console.log(error.message);
+                resolve([]);
             });
         }); 
     }
