@@ -54,3 +54,33 @@ body {
     letter-spacing: 5px;
     color: white;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    #logo {
+        top: 150px;
+        height: 80px;
+    }
+    
+    #title {
+        height: 600px;
+        width: 650px;
+        top: 550px;
+        margin-left: -325px;
+    }
+    
+    #title p {
+        font-size: 350px;
+    }
+    
+    #subtitle {
+        height: 100px;
+        width: 650px;
+        top: 630px;
+        margin-left: -325px;
+        text-align: center;
+    }
+    
+    #subtitle p {
+        font-size: 45px;
+    }
+}
