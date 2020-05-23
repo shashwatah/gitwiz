@@ -27,6 +27,12 @@ app.set('view engine', 'handlebars');
 
 app.use(router);
 
+app.use((req: express.Request, res: express.Response, next: express.NextFunction) => {
+    res.status(404).render("404Page", {
+        layout: false
+    });
+});
+
 app.listen(PORT, () => {
     return console.log(`GitWiz is running on port ${PORT}`);
 }); 

@@ -1,0 +1,56 @@
+body {
+    margin: 0px;
+    padding: 0px; 
+    text-align: center;
+    background: #1A1E22;
+}
+
+*:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#logo {
+    position: fixed;
+    top: 50px;
+    left: 125px;
+    height: 40px;
+}
+
+#title {
+    position: fixed;
+    height: 300px;
+    width: 500px;
+    text-align: center;
+    top: 225px;
+    left: 50%;
+    margin-left: -250px;
+}
+
+#title p {
+    position: relative;
+    margin-top: -50px;
+    color: #3A424A;
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
+    font-weight: bolder;
+    font-size: 300px;
+    opacity: 0.4;
+}
+
+#subtitle {
+    position: fixed;
+    height: 50px;
+    width: 550px;
+    top: 300px;
+    left: 50%;
+    margin-left: -275px;
+    text-align: center;
+}
+
+#subtitle p {
+    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
+    font-weight: bolder;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: white;
+}
