@@ -81,3 +81,41 @@ a:hover {
     color: white;
     font-size: 16px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    body {
+        text-align: center;
+    }
+    #source-btn {
+        display: none;
+    }
+    
+    #search-container {
+        position: relative;
+        height: 400px;
+        width: 90%;
+        margin-top: 500px;
+    }
+    
+    #search-logo {
+        height: 100px;
+    }
+    
+    #search-bar {
+        position: relative;
+        width: calc(100% - 50px);
+        height: 120px;
+        border-radius: 10px;
+        font-size: 40px;
+    }
+    
+    #footnote {
+        position: fixed;
+        width: 400px;
+        text-align: center;
+        left: 50%;
+        margin-left: -200px;
+        bottom: 20px;
+        font-size: 30px;
+    }
+}

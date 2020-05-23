@@ -1,3 +1,8 @@
+const logoImg = document.getElementById("topbar-logo");
+if(window.innerWidth <= 1024 && window.innerWidth >= 320) {
+    logoImg.src = "images/icon.webp";
+}
+
 $(window).on('scroll',function(){
     if (Math.round($(window).scrollTop()) > 400) {
         $("#topbar").removeClass('topbar-noscroll')

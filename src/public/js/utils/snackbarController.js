@@ -9,7 +9,4 @@ function snackbarController(message) {
 
 function snackbarVisible() {
   snackbar.classList.add("snackbar-visible");
-  // setTimeout(function() {
-  //   snackbar.classList.remove("snackbar-visible");
-  // }, 2500);
 }

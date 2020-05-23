@@ -63,7 +63,7 @@ body {
 
 .topbar-noscroll {
     position: relative;
-    width: 75%;
+    max-width: 75%;
     margin: 25px auto 0px auto;
     border-radius: 4px;
 }
@@ -78,13 +78,13 @@ body {
 #topbar-el-container {
     position: relative;
     height: 100%;
-    width: 780px;
+    width: 70%;
     margin: auto;
 }
 
 #topbar-logo {
     position: relative;
-    height: 30px;
+    width: 90px;
     float: left;
     margin-top: 30px;
 }
@@ -92,7 +92,7 @@ body {
 #search-bar {
     position: relative;
     float: left;
-    width: 650px;
+    width: calc(100% - 130px);
     margin-left: 10px;
     height: 45px;
     margin-top: 20px;
@@ -306,4 +306,103 @@ body {
 .loader span:nth-child(odd) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+    #topbar {
+        height: 150px;
+    }
+    
+    .topbar-noscroll {
+        position: relative;
+        width: 90%;
+        margin: 50px auto 0px auto;
+        border-radius: 4px;
+    }
+    
+    #topbar-el-container {
+        position: relative;
+        height: 100%;
+        width: 95%;
+        margin: auto;
+    }
+    
+    #topbar-logo {
+        position: relative;
+        height: 100px;
+        margin-top: 30px;
+    }
+    
+    #search-bar {
+        position: relative;
+        width: 83%;
+        height: 90px;
+        margin-left: 5px;
+        margin-top: 30px;
+        border-radius: 8px;
+        font-size: 32px;
+    }
+    
+    #query-info-container {
+        position: relative;
+        height: 110px;
+        width: 90%;
+        margin: 100px auto;
+        margin-bottom: 30px;
+        border-bottom: 2px solid lightgrey;
+    }
+    
+    #query-title {
+        position: relative;
+        font-size: 75px;
+    }
+    
+    #query-res-count {
+        margin-top: 25px;
+        font-size: 50px;
+    }
+    
+    #res-container {
+        width: 90%;
+        margin: 60px auto;
+        text-align: center;
+    }
+
+    .res {
+        padding: 40px;
+        width: calc(100% - 80px);   
+        margin-bottom: 80px;
+        border-radius: 8px;
+        overflow: wrap;
+        word-wrap: break-word;
+    }
+    
+    #snackbar {
+      bottom: 50px;
+      width: 90%;
+      height: 120px;
+      border-radius: 8px;
+      margin-left: -45%;
+    }
+    
+    #snackbar p {
+      font-size: 30px;
+      margin-top: 50px;
+    }
+    
+    .loader {
+      width: 400px;
+      margin-left: -200px;
+      bottom: 80px;
+      font-size: 50px;
+    }
+    .loader span {
+      display: inline-block;
+      -webkit-animation: pulse 0.9s alternate infinite ease-in-out;
+              animation: pulse 0.9s alternate infinite ease-in-out;
+    }
+    .loader span:nth-child(odd) {
+      -webkit-animation-delay: 0.8s;
+              animation-delay: 0.8s;
+    }
 }
