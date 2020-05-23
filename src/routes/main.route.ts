@@ -1,7 +1,8 @@
 import express from "express";
 
 import GithubController from './../controllers/github.controller';
-import { GITHUB_TOKEN } from './../utils/env';
+import GitlabController from './../controllers/gitlab.controller';
+import { GITHUB_TOKEN, GITLAB_TOKEN } from './../utils/env';
 
 const router: express.Router = express.Router();
 
@@ -20,10 +21,10 @@ router.get("/search", (req: express.Request, res: express.Response) => {
 
 router.post("/fetch", async (req: express.Request, res: express.Response) => {
     console.log(req.body.query);
-    const controller: GithubController = new GithubController(req.body.query, `${GITHUB_TOKEN}`);
+    const controller: GitlabController = new GitlabController(req.body.query, `${GITLAB_TOKEN}`);
     await controller.processData().then(data => res.status(200).send(data))
     .catch(err => {
-        res.status(500).send("Query returned 0 results")
+        res.status(500).send(err.message)
     });
 });
 
