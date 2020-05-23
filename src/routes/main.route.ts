@@ -23,7 +23,7 @@ router.post("/fetch", async (req: express.Request, res: express.Response) => {
     .then(data => res.status(200).send(data))
     .catch(error => {
         console.log(error)
-        res.status(401).send("Couldn't lookup what you entered")
+        res.status(400).send("Couldn't lookup what you entered")
     });
 });
 

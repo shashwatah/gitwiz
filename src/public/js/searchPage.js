@@ -20,15 +20,16 @@ $.ajax({
         query: query
     },
     beforeSend: function() {
+        resContainer.innerHTML = `<div class="loader"><span>{</span> Loading <span>}</span></div>`;
         queryTitle.innerHTML = queryTitle.innerHTML.length < 25 ? queryTitle.innerHTML : `${queryTitle.innerHTML.substring(0, 25)}...`;
     },
     success: function(data) {
+        resContainer.innerHTML = "";
         queryResCount.innerHTML = `${data.length} Result${data.length > 1 ? "s" : ""}`;
         queryInfoContainer.style.display ="block";
         for(const currentChunk of data) {
             resContainer.innerHTML += currentChunk.htmlString;
         }
-        // console.log(data);
     },
     error: function(err) {
       resContainer.innerHTML = "";

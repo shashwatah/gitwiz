@@ -38,16 +38,20 @@ body {
   }
 }
 
-/* @keyframes fadeout {
-  from {
-    bottom: 0px;
-    opacity: 1;
-  }
+@-webkit-keyframes pulse {
   to {
-    bottom: -40px;
-    opacity: 0;
+    -webkit-transform: scale(1.33);
+            transform: scale(1.33);
+    opacity: 0.25;
   }
-} */
+}
+@keyframes pulse {
+  to {
+    -webkit-transform: scale(1.33);
+            transform: scale(1.33);
+    opacity: 0.25;
+  }
+}
 
 #topbar {
     z-index: 1;
@@ -144,10 +148,12 @@ body {
     height: auto;
     width: 75%;
     margin: 30px auto;
+    text-align: center;
 }
 
 .res {
     position: relative;
+    text-align: left;
     padding: 20px;
     height: auto;
     width: calc(100% - 40px);   
@@ -270,12 +276,34 @@ body {
   font-size: 15px;
   color: white;
   transform: translateZ(0);
-  /* margin-left: 100px; */
   margin-top: 25px;
 }
 
 .snackbar-visible {
   visibility: visible !important;
-  animation: fadein 0.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2s;
   transform: translateZ(0);
 }  
+
+.loader {
+  position: fixed;
+  left: 50%;
+  width: 200px;
+  text-align: center;
+  margin-left: -100px;
+  bottom: 40px;
+  color: #24292E;
+  font-family: "Assistant", sans-serif;
+  font-weight: bolder;
+  font-size: 25px;
+  opacity: 0.8;
+}
+.loader span {
+  display: inline-block;
+  -webkit-animation: pulse 0.9s alternate infinite ease-in-out;
+          animation: pulse 0.9s alternate infinite ease-in-out;
+}
+.loader span:nth-child(odd) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
