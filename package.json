@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "npm run build && node start build/app.js"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
