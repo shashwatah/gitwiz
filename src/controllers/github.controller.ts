@@ -18,7 +18,7 @@ interface DataEdge {
         description: string,
         parent?: {
             nameWithOwner: string
-        },
+        } | null,
         languages: {
             nodes: Array<{
                 name: string
@@ -103,7 +103,7 @@ export default class GithubController {
                                         <p class="res-el res-title">${edge.node.name}</p>
                                         <p class="res-el res-sub">https://www.github.com > ${edge.node.nameWithOwner}</p>
                                     </a>
-                                    ${edge.node.description.length > 0 ? `<p class="res-el res-desc">${edge.node.description}</p>` : ""}
+                                    ${edge.node.description !== null ? edge.node.description.length > 0 ? `<p class="res-el res-desc">${edge.node.description}</p>` : "" : ""}
                                     <div class="res-data-tag-container">
                                         ${edge.node.languages.nodes[0] ? `<button class="res-tag res-data-tag">${edge.node.languages.nodes[0].name.toUpperCase()}</button>` : ""}
                                         ${edge.node.releases.nodes.length > 0 ? `<button class="res-tag res-data-tag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16" width="15" height="16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 000-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg> ${edge.node.releases.nodes[0].tagName}</button>` : ""}
