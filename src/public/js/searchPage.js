@@ -10,7 +10,8 @@ $(window).on('scroll',function(){
 
 const resContainer = document.getElementById("res-container");
 const queryInfoContainer = document.getElementById("query-info-container");
-const resCount = document.getElementById("query-res-count");
+const queryTitle = document.getElementById("query-title");
+const queryResCount = document.getElementById("query-res-count");
 
 $.ajax({
     method: "POST",
@@ -18,13 +19,16 @@ $.ajax({
     data: {
         query: query
     },
+    beforeSend: function() {
+        queryTitle.innerHTML = queryTitle.innerHTML.length < 25 ? queryTitle.innerHTML : `${queryTitle.innerHTML.substring(0, 25)}...`;
+    },
     success: function(data) {
-        resCount.innerHTML = `${data.length} Result${data.length > 1 ? "s" : ""}`;
+        queryResCount.innerHTML = `${data.length} Result${data.length > 1 ? "s" : ""}`;
         queryInfoContainer.style.display ="block";
         for(const currentChunk of data) {
             resContainer.innerHTML += currentChunk.htmlString;
         }
-        console.log(data);
+        // console.log(data);
     },
     error: function(err) {
       resContainer.innerHTML = "";

@@ -38,7 +38,7 @@ body {
   }
 }
 
-@keyframes fadeout {
+/* @keyframes fadeout {
   from {
     bottom: 0px;
     opacity: 1;
@@ -47,7 +47,7 @@ body {
     bottom: -40px;
     opacity: 0;
   }
-}
+} */
 
 #topbar {
     z-index: 1;
@@ -276,6 +276,6 @@ body {
 
 .snackbar-visible {
   visibility: visible !important;
-  animation: fadein 0.5s, fadeout 0.5s 2s;
+  animation: fadein 0.5s;
   transform: translateZ(0);
 }  

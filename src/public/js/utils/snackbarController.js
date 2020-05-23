@@ -9,8 +9,7 @@ function snackbarController(message) {
 
 function snackbarVisible() {
   snackbar.classList.add("snackbar-visible");
-  //This will hide the snackbar right after the fadeOut animation ends
-  setTimeout(function() {
-    snackbar.classList.remove("snackbar-visible");
-  }, 2500);
+  // setTimeout(function() {
+  //   snackbar.classList.remove("snackbar-visible");
+  // }, 2500);
 }
