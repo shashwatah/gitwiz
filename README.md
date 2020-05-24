@@ -123,6 +123,11 @@ GitWiz is currently deployed on Heroku.
 <br/>
 Click [here](https://gitwiz.herokuapp.com) to visit.
 
+## Contribution
+
+Fork the repository and open a pull request to contribute.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
 ## Authors
 
 - **KSSBro** - [Github](https://github.com/KSSBro)
