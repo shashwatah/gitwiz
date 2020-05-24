@@ -7,7 +7,7 @@
 </h1>
 
 <h4 align="center">
-A singular portal to search for public repos on multiple version control platforms.
+A singular portal to search for public repos from multiple version control platforms.
 <br/>
 Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.typescriptlang.org/">TypeScript</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>.
 </h4>
