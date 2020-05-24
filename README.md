@@ -25,7 +25,7 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#installation">Installation</a> •
   <a href="#configuration">Configuration</a> •
-  <a href="#run-&-build">Run & Build</a> •
+  <a href="#run--build">Run & Build</a> •
   <a href="#deployment">Deployment</a> •
   <a href="#contribution">Contribution</a> •
   <a href="#authors">Authors</a> •
