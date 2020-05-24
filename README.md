@@ -21,3 +21,92 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
 </p>
 
 <img alt="Gif" src="https://raw.githubusercontent.com/KSSBro/gitwiz/master/src/public/images/other/gitwiz.gif">
+
+## Prerequisites
+
+- Git is need to clone repository on your machine.
+- npm is needed to install packages.
+- Node.js is needed to run Orion.
+
+### Ubuntu
+
+Install git, Node.js and npm on your machine running Ubuntu:
+
+``` 
+$ sudo apt-get install git-core
+$ sudo apt install nodejs
+$ sudo apt install npm
+```
+### Windows 
+
+Use the official links for downloading on Windows:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/download/)
+- [npm](https://www.npmjs.com/get-npm)
+
+Run the following commands to confirm if the installation was successful:
+
+```
+$ git --version
+$ node --version
+$ npm --version 
+```
+
+## Installation
+
+Clone the repo and cd into the directory: 
+
+```
+$ git clone https://github.com/KSSBro/gitwiz.git
+$ cd gitwiz 
+```
+
+Then install the node-modules in package.json:
+
+```
+$ npm install
+```
+
+## Configuration 
+
+Make a .env file and set the following environment variables: 
+- **PORT** - For the port the server is going to run on
+- **MORGAN_METHOD** - For the method that morgan is going to log requests
+- **GITHUB_TOKEN** - Auth Token to make requests to GitHub GraphQL API
+- **GITLAB_TOKEN** - Auth Token to make requests to GitLab GraphQL API
+
+## Run & Build
+
+Run the app with the following command:
+
+```
+$ npm start
+```
+
+Build the app(Compile TypeScript to JavaScript) with the following command:
+
+```
+$ npm run build
+```
+
+Run the app with nodemon with the following command:
+
+```
+$ npm run dev
+```
+> nodemon will use the config specified in *nodemon.json*
+
+Open a browser and type **localhost:_port_**
+
+## Deployment 
+
+GitWiz is currently deployed on Heroku: Click [here](https://gitwiz.herokuapp.com) to visit
+
+## Authors
+
+- **KSSBro** - [Github](https://github.com/KSSBro)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
