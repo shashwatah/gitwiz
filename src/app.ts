@@ -1,4 +1,5 @@
 import express from "express";
+import compression from "compression";
 import * as bodyParser from "body-parser";
 import * as exphbs from "express-handlebars";
 import helmet from "helmet";
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.use(morgan(`${MORGAN_METHOD}`));
 app.use(helmet());
 app.use(cors());
+app.use(compression());
 
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
