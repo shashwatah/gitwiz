@@ -220,19 +220,6 @@ body {
     font-size: 16px;
 }
 
-.res-sub-dot {
-    font-weight: bold;
-}
-
-.res-sub-link a {
-    color: grey;
-    text-decoration: none;
-}
-
-.res-sub-link:hover a {
-    color: #1A1E22;
-}
-
 .res-desc {
     font-size: 18px;
 }
@@ -240,7 +227,6 @@ body {
 .res-data-tag-container {
     position: relative;
     height: auto;
-    /* width: 80%; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -395,14 +381,5 @@ body {
       margin-left: -200px;
       bottom: 80px;
       font-size: 50px;
-    }
-    .loader span {
-      display: inline-block;
-      -webkit-animation: pulse 0.9s alternate infinite ease-in-out;
-              animation: pulse 0.9s alternate infinite ease-in-out;
-    }
-    .loader span:nth-child(odd) {
-      -webkit-animation-delay: 0.8s;
-              animation-delay: 0.8s;
     }
 }

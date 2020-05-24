@@ -22,7 +22,7 @@ interface DataEdge {
         nameWithOwner: string,
         url: string,
         homepageUrl: string,
-        description: string,
+        description: string | null,
         parent?: {
             nameWithOwner: string
         } | null,

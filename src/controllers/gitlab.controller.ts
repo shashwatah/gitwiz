@@ -14,12 +14,12 @@ interface DataEdge {
         name: string,
         nameWithNamespace: string,
         webUrl: string, 
-        description: string,
+        description: string | null,
         starCount: number,
         forksCount: number,
         repository: {
-            rootRef: string
-        },
+            rootRef: string | null
+        } | null,
         createdAt: string
     }
 };
