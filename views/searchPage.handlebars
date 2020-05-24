@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="A singular portal to search for public repos from multiple version control platforms.">
+    <meta name="keywords" content="KSSBro, gitwiz, GitWiz, repos, Repository, search, github, gitlab, git, version control">
+    <meta name="author" content="KSSBro">
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#24292E">
     <meta charset="UTF-8">
     <title>{{ query }} | GitWiz</title>
     <link rel="stylesheet" href="css/searchPage.css" type="text/css"/>
@@ -9,7 +14,7 @@
 <body>
     <div class="page-el container topbar-noscroll" id="topbar">
         <div class="container" id="topbar-el-container">
-            <a href="/"><img class="logo topbar-el" id="topbar-logo" src="images/logo.webp" type="image/webp" ondragstart="return false;"/></a>
+            <a href="/"><img class="logo topbar-el" id="topbar-logo" type="image/webp" ondragstart="return false;"/></a>
             <form action="/search" method="GET" class="topbar-el" id="search-form">
                 <input type="text" value="{{query}}" placeholder="Repository" name="query" class="form-el" id="search-bar"/>
             </form>
