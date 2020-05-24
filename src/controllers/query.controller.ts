@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 
 interface QueryData {
+    rateLimit?: object,
     message: string,
     data: object
 };
