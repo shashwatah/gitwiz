@@ -110,12 +110,8 @@ a:hover {
     }
     
     #footnote {
-        position: fixed;
-        width: 400px;
-        text-align: center;
-        left: 50%;
-        margin-left: -200px;
-        bottom: 20px;
+        position: relative;
+        margin: 500px auto 0px auto;
         font-size: 30px;
     }
 }

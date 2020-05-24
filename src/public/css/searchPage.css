@@ -208,7 +208,7 @@ body {
     text-decoration: underline;
 }
 
-.res-link .res-title {
+.res-title {
     color: #1A1E22;
     font-size: 26px;
     margin: 0px;
@@ -238,6 +238,26 @@ body {
     margin-right: 10px;
     font-size: 14px; 
     margin-top: 10px;   
+}
+
+.octicon-release {
+    height: 16px;
+    width: 15px;
+}
+
+.octicon-star {
+    height: 16px;
+    width: 14px;
+}
+
+.octicon-fork {
+    height: 16px;
+    width: 10px;
+}
+
+.octicon-branch {
+    height: 16px;
+    width: 10px;
 }
 
 #snackbar {
@@ -362,7 +382,62 @@ body {
         overflow: wrap;
         word-wrap: break-word;
     }
+
+    .res-el {
+        margin-top: 20px;
+    }
+
+    .res-title {
+        font-size: 52px;
+        margin: 0px;
+    }
+
+    .res-desc {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
     
+    .res-sub {
+        font-size: 24px;
+    }
+
+    .res-tag {
+        padding: 0px 15px 0px 15px;
+        height: 45px;
+        border-radius: 4px;
+    }
+    
+    .res-pf-tag {
+        margin-bottom: 25px;
+        font-size: 28px;
+    }
+    
+    .res-data-tag {
+        margin-right: 20px;
+        font-size: 28px; 
+        margin-top: 20px;   
+    }
+    
+    .octicon-release {
+        height: 32px;
+        width: 30px;
+    }
+    
+    .octicon-star {
+        height: 32px;
+        width: 28px;
+    }
+    
+    .octicon-fork {
+        height: 32px;
+        width: 20px;
+    }
+    
+    .octicon-branch {
+        height: 32px;
+        width: 20px;
+    }
+
     #snackbar {
       bottom: 50px;
       width: 90%;
@@ -382,4 +457,5 @@ body {
       bottom: 80px;
       font-size: 50px;
     }
+
 }
