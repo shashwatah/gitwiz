@@ -359,8 +359,9 @@ body {
     }
     
     #query-title {
+        margin-top: -10px;
         position: relative;
-        font-size: 75px;
+        font-size: 85px;
     }
     
     #query-res-count {

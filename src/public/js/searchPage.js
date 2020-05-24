@@ -29,8 +29,9 @@ $.ajax({
         query: query
     },
     beforeSend: function() {
+        let stringLength = mobileCheck() === true ? 12 : 25;
+        queryTitle.innerHTML = queryTitle.innerHTML.length < stringLength ? queryTitle.innerHTML : `${queryTitle.innerHTML.substring(0, stringLength)}...`;
         resContainer.innerHTML = `<div class="loader"><span>{</span> Loading <span>}</span></div>`;
-        queryTitle.innerHTML = queryTitle.innerHTML.length < 25 ? queryTitle.innerHTML : `${queryTitle.innerHTML.substring(0, 25)}...`;
     },
     success: function(data) {
         resContainer.innerHTML = "";
