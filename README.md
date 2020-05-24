@@ -7,10 +7,6 @@
 </h1>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/electron-markdownify">
-    <img src="https://badge.fury.io/js/electron-markdownify.svg"
-         alt="Gitter">
-  </a>
   <a><img alt="MIT License" src="https://img.shields.io/apm/l/atomic-design-ui.svg?"></a>
   <a><img alt="Github Release" src="https://img.shields.io/badge/release-v1.1-blue"></a>
   <a href="http://makeapullrequest.com">
@@ -18,4 +14,8 @@
   </a>
 </p>
 
-[GitWiz](https://gitwiz.herokuapp.com) is a singular portal to search for public repos on multiple version control platforms
+<h4 align="center">
+A singular portal to search for public repos on multiple version control platforms.
+<br/>
+Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.typescriptlang.org/">TypeScript</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+</h4>
