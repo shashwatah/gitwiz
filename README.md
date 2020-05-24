@@ -20,13 +20,31 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
   </a>
 </p>
 
+<p align="center">
+  <a href="#platforms">Platforms</a> •
+  <a href="#prerequisites">Prerequisites</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#configuration">Configuration</a> •
+  <a href="#run-&-build">Run & Build</a> •
+  <a href="#deployment">Deployment</a>
+  <a href="#authors">Authors</a>
+  <a href="#license">License</a>
+</p>
+
 <img alt="Gif" src="https://raw.githubusercontent.com/KSSBro/gitwiz/master/src/public/images/other/gitwiz.gif">
+
+## Platforms
+
+GitWiz currently supports the following version control platforms: 
+
+- GitHub
+- GitLab
 
 ## Prerequisites
 
 - Git is need to clone repository on your machine.
 - npm is needed to install packages.
-- Node.js is needed to run Orion.
+- Node.js is needed to run GitWiz.
 
 ### Ubuntu
 
@@ -84,12 +102,6 @@ Run the app with the following command:
 $ npm start
 ```
 
-Build the app(Compile TypeScript to JavaScript) with the following command:
-
-```
-$ npm run build
-```
-
 Run the app with nodemon with the following command:
 
 ```
@@ -99,9 +111,17 @@ $ npm run dev
 
 Open a browser and type **localhost:_port_**
 
+Build the app(Compile TypeScript to JavaScript) with the following command:
+
+```
+$ npm run build
+```
+
 ## Deployment 
 
-GitWiz is currently deployed on Heroku: Click [here](https://gitwiz.herokuapp.com) to visit
+GitWiz is currently deployed on Heroku.
+<br/>
+Click [here](https://gitwiz.herokuapp.com) to visit.
 
 ## Authors
 
