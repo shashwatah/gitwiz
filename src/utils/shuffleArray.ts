@@ -1,6 +1,6 @@
 export const shuffleArray = (array: Array<object>): Array<object> => {
-    var currentIndex: number = array.length, randomIndex: number;
-    var temporaryValue: object;
+    let currentIndex: number = array.length, randomIndex: number;
+    let temporaryValue: object;
 
   while (0 !== currentIndex) {
     randomIndex = Math.floor(Math.random() * currentIndex);

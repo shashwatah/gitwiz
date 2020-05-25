@@ -59,7 +59,7 @@ export default class GitlabController {
     }
 
     processData(): Promise<Array<object>>{
-        var processedData: Array<object> = [];
+        let processedData: Array<object> = [];
         return new Promise((resolve, reject) => {
             this.makeQuery().then((response: Array<DataEdge>) => {
                 if(response !== undefined ) {

@@ -90,13 +90,13 @@ export default class GithubController {
     }
 
     processData(): Promise<Array<object>> {
-        var processedData: Array<object> = [];
+        let processedData: Array<object> = [];
         return new Promise(async (resolve, reject) => {
             this.makeQuery().then((response: Array<DataEdge>) => {
                 if(response !== undefined) {
                     response.forEach((edge: DataEdge) => {
                         if(!edge.node.parent?.nameWithOwner) {
-                            var repoTopicTags: string = "", langTags: string = "";
+                            let repoTopicTags: string = "", langTags: string = "";
                             if(edge.node.repositoryTopics.nodes.length > 0) {
                                 for(const repoTopic of edge.node.repositoryTopics.nodes) {
                                     repoTopicTags += `<button class="res-tag res-data-tag">${repoTopic.topic.name}</button>`;
