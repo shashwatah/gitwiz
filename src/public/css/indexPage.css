@@ -74,9 +74,12 @@ a:hover {
 }
 
 #footnote {
-    position: relative;
-    margin: auto;
-    bottom: 10px;
+    position: fixed;
+    width: 250px;
+    text-align: center;
+    left: 50%;
+    margin-left: -125px;
+    bottom: 30px;
     font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
     color: white;
     font-size: 16px;
@@ -111,6 +114,8 @@ a:hover {
     
     #footnote {
         position: relative;
+        left: 0%;
+        width: 500px;
         margin: 500px auto 0px auto;
         font-size: 30px;
     }
