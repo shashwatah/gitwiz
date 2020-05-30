@@ -1,6 +1,8 @@
-export const shuffleArray = (array: Array<object>): Array<object> => {
+import { ProcessedData } from './../types/general.interfaces';
+
+export const shuffleArray = (array: Array<ProcessedData>): Array<ProcessedData> => {
     let currentIndex: number = array.length, randomIndex: number;
-    let temporaryValue: object;
+    let temporaryValue: ProcessedData;
 
   while (0 !== currentIndex) {
     randomIndex = Math.floor(Math.random() * currentIndex);

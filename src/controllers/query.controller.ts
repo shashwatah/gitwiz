@@ -1,10 +1,5 @@
 import fetch from "node-fetch";
-
-interface QueryData {
-    rateLimit?: object,
-    message: string,
-    data: object
-};
+import { MainQueryData } from './../types/general.interfaces';
 
 export default class QueryController {
     private url: string;
@@ -30,7 +25,7 @@ export default class QueryController {
             .then(async response => await response.json())
             .then(response => {
                 if(response.data) {
-                    const queryData: QueryData = {
+                    const queryData: MainQueryData = {
                         message: "success",
                         data: response.data
                     }

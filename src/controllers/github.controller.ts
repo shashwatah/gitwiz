@@ -1,56 +1,6 @@
 import QueryController from './query.controller';
-
-interface QueryData {
-    rateLimit?: RateLimit,
-    message?: string,
-    data?: {
-        search: {
-            edges: Array<DataEdge>
-        }
-    }
-};
-
-interface RateLimit {
-    cost: number,
-    remaining: number,
-    resetAt: string
-};
-
-interface DataEdge {
-    node: {
-        name: string,
-        nameWithOwner: string,
-        url: string,
-        homepageUrl: string,
-        description: string | null,
-        parent?: {
-            nameWithOwner: string
-        } | null,
-        languages: {
-            nodes: Array<{
-                name: string
-            }>
-        },
-        releases: {
-            nodes: Array<{
-                tagName: string
-            }>
-        },
-        forkCount: number,
-        stargazers: {
-            totalCount: number
-        },
-        diskUsage: number,
-        createdAt: string,
-        repositoryTopics: {
-            nodes: Array<{
-                topic: {
-                    name: string
-                }
-            }>
-        }
-    }   
-};
+import { QueryData, DataEdge } from './../types/github.interfaces';
+import { ProcessedData } from './../types/general.interfaces';
 
 export default class GithubController {
     private url: string;
@@ -89,8 +39,9 @@ export default class GithubController {
         });     
     }
 
-    processData(): Promise<Array<object>> {
-        let processedData: Array<object> = [];
+    //This will be changed later when the data will be processed on the frontend instead
+    processData(): Promise<Array<ProcessedData>> {
+        let processedData: Array<ProcessedData> = [];
         return new Promise(async (resolve, reject) => {
             this.makeQuery().then((response: Array<DataEdge>) => {
                 if(response !== undefined) {

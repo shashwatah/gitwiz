@@ -1,28 +1,6 @@
 import QueryController from './query.controller';
-
-interface QueryData {
-    message?: string,
-    data?: {
-        projects: {
-            edges: Array<DataEdge>
-        }
-    }
-};
-
-interface DataEdge {
-    node: {
-        name: string,
-        nameWithNamespace: string,
-        webUrl: string, 
-        description: string | null,
-        starCount: number,
-        forksCount: number,
-        repository: {
-            rootRef: string | null
-        } | null,
-        createdAt: string
-    }
-};
+import { QueryData, DataEdge } from './../types/gitlab.interfaces';
+import { ProcessedData } from './../types/general.interfaces';
 
 export default class GitlabController {
     private url: string;
@@ -58,8 +36,9 @@ export default class GitlabController {
         });
     }
 
-    processData(): Promise<Array<object>>{
-        let processedData: Array<object> = [];
+    //This will be changed later when the data will be processed on the frontend instead
+    processData(): Promise<Array<ProcessedData>>{
+        let processedData: Array<ProcessedData> = [];
         return new Promise((resolve, reject) => {
             this.makeQuery().then((response: Array<DataEdge>) => {
                 if(response !== undefined ) {
