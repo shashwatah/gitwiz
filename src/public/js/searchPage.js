@@ -5,10 +5,14 @@ const queryTitle = document.getElementById("query-title");
 const queryResCount = document.getElementById("query-res-count");
 
 const icons = {
-    release: '<svg class="octicon octicon-release"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 000-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg>',
-    star: '<svg aria-hidden="true" class="octicon octicon-star" role="img" viewBox="0 0 14 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>',
-    fork: '<svg class="octicon octicon-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>',
-    branch: '<svg class="octicon octicon-branch"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 00-1-3.72C.88 1 0 1.89 0 3a2 2 0 001 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>'
+  release:
+    '<svg class="octicon octicon-release"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M7.73 1.73C7.26 1.26 6.62 1 5.96 1H3.5C2.13 1 1 2.13 1 3.5v2.47c0 .66.27 1.3.73 1.77l6.06 6.06c.39.39 1.02.39 1.41 0l4.59-4.59a.996.996 0 000-1.41L7.73 1.73zM2.38 7.09c-.31-.3-.47-.7-.47-1.13V3.5c0-.88.72-1.59 1.59-1.59h2.47c.42 0 .83.16 1.13.47l6.14 6.13-4.73 4.73-6.13-6.15zM3.01 3h2v2H3V3h.01z"></path></svg>',
+  star:
+    '<svg aria-hidden="true" class="octicon octicon-star" role="img" viewBox="0 0 14 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>',
+  fork:
+    '<svg class="octicon octicon-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>',
+  branch:
+    '<svg class="octicon octicon-branch"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 16" style="display: inline-block; fill: currentcolor; user-select: none; vertical-align: text-bottom;"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 00-1-3.72C.88 1 0 1.89 0 3a2 2 0 001 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>',
 };
 
 const mobileCheck = function () {
@@ -28,14 +32,14 @@ const mobileCheck = function () {
 };
 
 const escapeString = function (string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+};
 
-const addClasses = function(element, classArr) {
-    classArr.forEach((current) => {
-        element.classList.add(current);
-    })
-}
+const addClasses = function (element, classArr) {
+  classArr.forEach((current) => {
+    element.classList.add(current);
+  });
+};
 
 logoImg.src = mobileCheck() === true ? "images/icon.webp" : "images/logo.webp";
 
@@ -74,43 +78,48 @@ $.ajax({
       let res = document.createElement("div");
       res.className = "res";
 
-      let pfBtn = document.createElement('button');
-      addClasses(pfBtn, ['res-el', 'res-pf-tag', 'res-tag']);
-      currentChunk.platform === "GitHub" ? pfBtn.classList.add('res-gh-tag'): pfBtn.classList.add('res-gl-tag');
+      let pfBtn = document.createElement("button");
+      addClasses(pfBtn, ["res-el", "res-pf-tag", "res-tag"]);
+      currentChunk.platform === "GitHub"
+        ? pfBtn.classList.add("res-gh-tag")
+        : pfBtn.classList.add("res-gl-tag");
       pfBtn.textContent = currentChunk.platform;
 
-      let title = document.createElement('p');
-      addClasses(title, ['res-el', 'res-title']);
+      let title = document.createElement("p");
+      addClasses(title, ["res-el", "res-title"]);
       title.textContent = currentChunk.name;
 
-      let subtitle = document.createElement('p');
-      addClasses(subtitle, ['res-el', 'res-sub']);
+      let subtitle = document.createElement("p");
+      addClasses(subtitle, ["res-el", "res-sub"]);
       subtitle.textContent = `${currentChunk.link} > ${currentChunk.sub}`;
 
-      let mainAnchor = document.createElement('a');
+      let mainAnchor = document.createElement("a");
       mainAnchor.href = currentChunk.url;
-      mainAnchor.className = 'res-link';
+      mainAnchor.className = "res-link";
       mainAnchor.appendChild(title);
       mainAnchor.appendChild(subtitle);
 
-      let desc = document.createElement('p');
-      addClasses(desc, ['res-el', 'res-desc']);
-      desc.textContent = currentChunk.desc.length > 500 ? `${currentChunk.desc.substring(0, 500)}...` : currentChunk.desc;
+      let desc = document.createElement("p");
+      addClasses(desc, ["res-el", "res-desc"]);
+      desc.textContent =
+        currentChunk.desc.length > 500
+          ? `${currentChunk.desc.substring(0, 500)}...`
+          : currentChunk.desc;
 
-      let tagContainer = document.createElement('div');
-      tagContainer.className = 'res-data-tag-container';
+      let tagContainer = document.createElement("div");
+      tagContainer.className = "res-data-tag-container";
 
-      for(let tag of currentChunk.tags) {
-          let tagBtn = document.createElement('button');
-          addClasses(tagBtn, ['res-tag', 'res-data-tag']);
-          
-          if(tag.icon) {
-              tagBtn.innerHTML = `${icons[tag.type]} ${tag.content}`
-          } else {
-              tagBtn.textContent = tag.content;
-          }
+      for (let tag of currentChunk.tags) {
+        let tagBtn = document.createElement("button");
+        addClasses(tagBtn, ["res-tag", "res-data-tag"]);
 
-          tagContainer.appendChild(tagBtn);
+        if (tag.icon) {
+          tagBtn.innerHTML = `${icons[tag.type]} ${tag.content}`;
+        } else {
+          tagBtn.textContent = tag.content;
+        }
+
+        tagContainer.appendChild(tagBtn);
       }
 
       res.appendChild(pfBtn);
@@ -125,5 +134,3 @@ $.ajax({
     snackbarController(err.responseText);
   },
 });
-
-

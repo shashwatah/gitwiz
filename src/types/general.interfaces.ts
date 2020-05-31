@@ -5,17 +5,17 @@ export interface MainQueryData {
 }
 
 export interface Tag {
-    type: string,
-    icon: boolean,
-    content: string | number
+  type: string;
+  icon: boolean;
+  content: string | number;
 }
 
 export interface ProcessedData {
-    platform: string,
-    link: string,
-    name: string,
-    domain: string,
-    sub: string,
-    desc: string,
-    tags: Array<Tag>
+  platform: string;
+  link: string;
+  name: string;
+  domain: string;
+  sub: string;
+  desc: string;
+  tags: Array<Tag>;
 }

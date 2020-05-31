@@ -20,7 +20,9 @@ export default class GitlabController {
     return new Promise((resolve, reject) => {
       this.queryController
         .fetchData(
-          `query { projects(search: \"${encodeURI(this.query)}\") { edges { node { name nameWithNamespace webUrl description starCount forksCount repository { rootRef } createdAt } } } }`
+          `query { projects(search: \"${encodeURI(
+            this.query
+          )}\") { edges { node { name nameWithNamespace webUrl description starCount forksCount repository { rootRef } createdAt } } } }`
         )
         .then((response: QueryData) => {
           if (response.data?.projects.edges) {
@@ -50,26 +52,26 @@ export default class GitlabController {
             response.forEach((edge: DataEdge) => {
               let tags: Array<Tag> = [];
 
-              if(edge.node.repository !== null) {
-                  if(edge.node.repository.rootRef !== null) {
-                      tags.push({
-                          type: "branch",
-                          icon: true,
-                          content: edge.node.repository.rootRef
-                      });
-                  }
+              if (edge.node.repository !== null) {
+                if (edge.node.repository.rootRef !== null) {
+                  tags.push({
+                    type: "branch",
+                    icon: true,
+                    content: edge.node.repository.rootRef,
+                  });
+                }
               }
 
               tags.push({
-                  type: "star",
-                  icon: true,
-                  content: edge.node.starCount
+                type: "star",
+                icon: true,
+                content: edge.node.starCount,
               });
 
               tags.push({
-                  type: "fork",
-                  icon: true,
-                  content: edge.node.forksCount
+                type: "fork",
+                icon: true,
+                content: edge.node.forksCount,
               });
 
               processedDataArray.push({
@@ -78,7 +80,8 @@ export default class GitlabController {
                 name: edge.node.name,
                 domain: "https://www.gitlab.com",
                 sub: edge.node.webUrl.substring(19),
-                desc: edge.node.description !== null ? edge.node.description : "",
+                desc:
+                  edge.node.description !== null ? edge.node.description : "",
                 tags: tags,
               });
             });
@@ -96,5 +99,3 @@ export default class GitlabController {
     });
   }
 }
-
-

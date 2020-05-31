@@ -1,30 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Roboto&display=swap");
 
 html::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 html::-webkit-scrollbar-track {
-    background: white;
+  background: white;
 }
 
 html::-webkit-scrollbar-thumb {
-    background: #1A1E22;
+  background: #1a1e22;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-    display: none;
+  display: none;
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    background: #F6F8FA;
+  margin: 0px;
+  padding: 0px;
+  background: #f6f8fa;
 }
 
 *:focus {
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @keyframes fadein {
@@ -41,228 +41,230 @@ body {
 @-webkit-keyframes pulse {
   to {
     -webkit-transform: scale(1.33);
-            transform: scale(1.33);
+    transform: scale(1.33);
     opacity: 0.25;
   }
 }
 @keyframes pulse {
   to {
     -webkit-transform: scale(1.33);
-            transform: scale(1.33);
+    transform: scale(1.33);
     opacity: 0.25;
   }
 }
 
 #topbar {
-    z-index: 1;
-    height: 85px;
-    border: 0px;
-    background: #24292E;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  z-index: 1;
+  height: 85px;
+  border: 0px;
+  background: #24292e;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .topbar-noscroll {
-    position: relative;
-    width: 75%;
-    margin: 25px auto 0px auto;
-    border-radius: 4px;
+  position: relative;
+  width: 75%;
+  margin: 25px auto 0px auto;
+  border-radius: 4px;
 }
 
 .topbar-scroll {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    border-radius: 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-radius: 0px;
 }
 
 #topbar-el-container {
-    position: relative;
-    height: 100%;
-    width: 70%;
-    margin: auto;
+  position: relative;
+  height: 100%;
+  width: 70%;
+  margin: auto;
 }
 
 #topbar-logo {
-    position: relative;
-    width: 90px;
-    float: left;
-    margin-top: 30px;
+  position: relative;
+  width: 90px;
+  float: left;
+  margin-top: 30px;
 }
 
 #search-bar {
-    position: relative;
-    float: left;
-    width: calc(100% - 130px);
-    margin-left: 10px;
-    height: 45px;
-    margin-top: 20px;
-    background: #3A424A;
-    border: 0px;
-    color: white;
-    border-radius: 4px;
-    font-size: 16px;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
-    padding-left: 15px;
-    padding-right: 15px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  position: relative;
+  float: left;
+  width: calc(100% - 130px);
+  margin-left: 10px;
+  height: 45px;
+  margin-top: 20px;
+  background: #3a424a;
+  border: 0px;
+  color: white;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace,
+    "Lucida Console", Monaco;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 #query-info-container {
-    position: relative;
-    height: 75px;
-    width: 75%;
-    margin: 50px auto;
-    margin-bottom: 15px;
-    border-bottom: 1px solid lightgrey;
-    display: none;
+  position: relative;
+  height: 75px;
+  width: 75%;
+  margin: 50px auto;
+  margin-bottom: 15px;
+  border-bottom: 1px solid lightgrey;
+  display: none;
 }
 
 #query-title {
-    position: relative;
-    margin: 0px;
-    margin-top: -2px;
-    padding: 0px;
-    font-size: 50px;
-    font-family: "Assistant", sans-serif;
-    font-weight: bolder;
-    font-weight: bolder;
-    color: #3A424A;
-    float: left;
+  position: relative;
+  margin: 0px;
+  margin-top: -2px;
+  padding: 0px;
+  font-size: 50px;
+  font-family: "Assistant", sans-serif;
+  font-weight: bolder;
+  font-weight: bolder;
+  color: #3a424a;
+  float: left;
 }
 
 #query-res-count {
-    margin: 0px;
-    margin-top: 19px;
-    padding: 0px;
-    position: relative;
-    font-family: "Assistant", sans-serif;
-    font-weight: bolder;
-    font-size: 30px;
-    float: right;
-    color: #3A424A;
+  margin: 0px;
+  margin-top: 19px;
+  padding: 0px;
+  position: relative;
+  font-family: "Assistant", sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  float: right;
+  color: #3a424a;
 }
 
 #res-container {
-    clear: both;
-    position: relative;
-    height: auto;
-    width: 75%;
-    margin: 30px auto 75px auto;
-    text-align: center;
+  clear: both;
+  position: relative;
+  height: auto;
+  width: 75%;
+  margin: 30px auto 75px auto;
+  text-align: center;
 }
 
 .res {
-    position: relative;
-    text-align: left;
-    padding: 20px;
-    height: auto;
-    width: calc(100% - 40px);   
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
-    color: black;
-    margin-bottom: 40px;
-    background: white;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  position: relative;
+  text-align: left;
+  padding: 20px;
+  height: auto;
+  width: calc(100% - 40px);
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace,
+    "Lucida Console", Monaco;
+  color: black;
+  margin-bottom: 40px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .res:hover {
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
 }
 
 .res-el {
-    margin: 0px;
-    margin-top: 10px;
+  margin: 0px;
+  margin-top: 10px;
 }
 
 .res-tag {
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    height: 28px;
-    min-width: 40px;
-    cursor: default;
-    border-radius: 2px;
-    border: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  height: 28px;
+  min-width: 40px;
+  cursor: default;
+  border-radius: 2px;
+  border: 0px;
 }
 
 .res-pf-tag {
-    margin-bottom: 10px;
-    font-size: 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-
 .res-gh-tag {
-    background: #1A1E22;
-    color: white;
+  background: #1a1e22;
+  color: white;
 }
 
 .res-gl-tag {
-    background: #fa7035;
-    color: white;
+  background: #fa7035;
+  color: white;
 }
 
 .res-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .res-link:hover .res-title {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .res-title {
-    color: #1A1E22;
-    font-size: 26px;
-    margin: 0px;
+  color: #1a1e22;
+  font-size: 26px;
+  margin: 0px;
 }
 
 .res-sub {
-    font-family: "Roboto", sans-serif;
-    color: grey;
-    font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: grey;
+  font-size: 16px;
 }
 
 .res-desc {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .res-data-tag-container {
-    position: relative;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .res-data-tag {
-    background: #EBEBEB;
-    color: black;
-    margin-right: 10px;
-    font-size: 14px; 
-    margin-top: 10px;   
+  background: #ebebeb;
+  color: black;
+  margin-right: 10px;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .octicon-release {
-    height: 16px;
-    width: 15px;
+  height: 16px;
+  width: 15px;
 }
 
 .octicon-star {
-    height: 16px;
-    width: 14px;
+  height: 16px;
+  width: 14px;
 }
 
 .octicon-fork {
-    height: 16px;
-    width: 10px;
+  height: 16px;
+  width: 10px;
 }
 
 .octicon-branch {
-    height: 16px;
-    width: 10px;
+  height: 16px;
+  width: 10px;
 }
 
 #snackbar {
   position: relative;
-  background-color: #24292E;
+  background-color: #24292e;
   position: fixed;
   bottom: 25px;
   width: 75%;
@@ -289,7 +291,7 @@ body {
   visibility: visible !important;
   animation: fadein 0.5s, fadeout 0.5s 2s;
   transform: translateZ(0);
-}  
+}
 
 .loader {
   position: fixed;
@@ -298,7 +300,7 @@ body {
   text-align: center;
   margin-left: -100px;
   bottom: 40px;
-  color: #24292E;
+  color: #24292e;
   font-family: "Assistant", sans-serif;
   font-weight: bolder;
   font-size: 25px;
@@ -307,156 +309,155 @@ body {
 .loader span {
   display: inline-block;
   -webkit-animation: pulse 0.9s alternate infinite ease-in-out;
-          animation: pulse 0.9s alternate infinite ease-in-out;
+  animation: pulse 0.9s alternate infinite ease-in-out;
 }
 .loader span:nth-child(odd) {
   -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-    #topbar {
-        height: 150px;
-    }
-    
-    .topbar-noscroll {
-        position: relative;
-        width: 900px;
-        margin: 50px auto 0px auto;
-        border-radius: 4px;
-    }
-    
-    #topbar-el-container {
-        position: relative;
-        height: 100%;
-        width: 95%;
-        margin: auto;
-    }
-    
-    #topbar-logo {
-        position: relative;
-        height: 100px;
-        margin-top: 30px;
-    }
-    
-    #search-bar {
-        position: relative;
-        width: 83%;
-        height: 90px;
-        margin-left: 5px;
-        margin-top: 30px;
-        border-radius: 8px;
-        font-size: 32px;
-    }
-    
-    #query-info-container {
-        position: relative;
-        height: 110px;
-        width: 90%;
-        margin: 100px auto;
-        margin-bottom: 30px;
-        border-bottom: 2px solid lightgrey;
-    }
-    
-    #query-title {
-        margin-top: -10px;
-        position: relative;
-        font-size: 85px;
-    }
-    
-    #query-res-count {
-        margin-top: 25px;
-        font-size: 50px;
-    }
-    
-    #res-container {
-        width: 90%;
-        margin: 60px auto;
-        text-align: center;
-    }
+  #topbar {
+    height: 150px;
+  }
 
-    .res {
-        padding: 40px;
-        width: calc(100% - 80px);   
-        margin-bottom: 80px;
-        border-radius: 8px;
-        overflow: wrap;
-        word-wrap: break-word;
-    }
+  .topbar-noscroll {
+    position: relative;
+    width: 900px;
+    margin: 50px auto 0px auto;
+    border-radius: 4px;
+  }
 
-    .res-el {
-        margin-top: 20px;
-    }
+  #topbar-el-container {
+    position: relative;
+    height: 100%;
+    width: 95%;
+    margin: auto;
+  }
 
-    .res-title {
-        font-size: 52px;
-        margin: 0px;
-    }
+  #topbar-logo {
+    position: relative;
+    height: 100px;
+    margin-top: 30px;
+  }
 
-    .res-desc {
-        font-size: 24px;
-        margin-bottom: 25px;
-    }
-    
-    .res-sub {
-        font-size: 24px;
-    }
+  #search-bar {
+    position: relative;
+    width: 83%;
+    height: 90px;
+    margin-left: 5px;
+    margin-top: 30px;
+    border-radius: 8px;
+    font-size: 32px;
+  }
 
-    .res-tag {
-        padding: 0px 15px 0px 15px;
-        height: 45px;
-        border-radius: 4px;
-    }
-    
-    .res-pf-tag {
-        margin-bottom: 25px;
-        font-size: 28px;
-    }
-    
-    .res-data-tag {
-        margin-right: 20px;
-        font-size: 28px; 
-        margin-top: 20px;   
-    }
-    
-    .octicon-release {
-        height: 32px;
-        width: 30px;
-    }
-    
-    .octicon-star {
-        height: 32px;
-        width: 28px;
-    }
-    
-    .octicon-fork {
-        height: 32px;
-        width: 20px;
-    }
-    
-    .octicon-branch {
-        height: 32px;
-        width: 20px;
-    }
+  #query-info-container {
+    position: relative;
+    height: 110px;
+    width: 90%;
+    margin: 100px auto;
+    margin-bottom: 30px;
+    border-bottom: 2px solid lightgrey;
+  }
 
-    #snackbar {
-      bottom: 50px;
-      width: 90%;
-      height: 120px;
-      border-radius: 8px;
-      margin-left: -45%;
-    }
-    
-    #snackbar p {
-      font-size: 30px;
-      margin-top: 50px;
-    }
-    
-    .loader {
-      width: 400px;
-      margin-left: -200px;
-      bottom: 80px;
-      font-size: 50px;
-    }
+  #query-title {
+    margin-top: -10px;
+    position: relative;
+    font-size: 85px;
+  }
 
+  #query-res-count {
+    margin-top: 25px;
+    font-size: 50px;
+  }
+
+  #res-container {
+    width: 90%;
+    margin: 60px auto;
+    text-align: center;
+  }
+
+  .res {
+    padding: 40px;
+    width: calc(100% - 80px);
+    margin-bottom: 80px;
+    border-radius: 8px;
+    overflow: wrap;
+    word-wrap: break-word;
+  }
+
+  .res-el {
+    margin-top: 20px;
+  }
+
+  .res-title {
+    font-size: 52px;
+    margin: 0px;
+  }
+
+  .res-desc {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .res-sub {
+    font-size: 24px;
+  }
+
+  .res-tag {
+    padding: 0px 15px 0px 15px;
+    height: 45px;
+    border-radius: 4px;
+  }
+
+  .res-pf-tag {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+
+  .res-data-tag {
+    margin-right: 20px;
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .octicon-release {
+    height: 32px;
+    width: 30px;
+  }
+
+  .octicon-star {
+    height: 32px;
+    width: 28px;
+  }
+
+  .octicon-fork {
+    height: 32px;
+    width: 20px;
+  }
+
+  .octicon-branch {
+    height: 32px;
+    width: 20px;
+  }
+
+  #snackbar {
+    bottom: 50px;
+    width: 90%;
+    height: 120px;
+    border-radius: 8px;
+    margin-left: -45%;
+  }
+
+  #snackbar p {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+
+  .loader {
+    width: 400px;
+    margin-left: -200px;
+    bottom: 80px;
+    font-size: 50px;
+  }
 }

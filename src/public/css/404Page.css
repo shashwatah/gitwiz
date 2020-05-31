@@ -1,86 +1,88 @@
 body {
-    margin: 0px;
-    padding: 0px; 
-    text-align: center;
-    background: #1A1E22;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  background: #1a1e22;
 }
 
 *:focus {
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 #logo {
-    position: fixed;
-    top: 50px;
-    left: 125px;
-    height: 40px;
+  position: fixed;
+  top: 50px;
+  left: 125px;
+  height: 40px;
 }
 
 #title {
-    position: fixed;
-    height: 300px;
-    width: 500px;
-    text-align: center;
-    top: 225px;
-    left: 50%;
-    margin-left: -250px;
+  position: fixed;
+  height: 300px;
+  width: 500px;
+  text-align: center;
+  top: 225px;
+  left: 50%;
+  margin-left: -250px;
 }
 
 #title p {
-    position: relative;
-    margin-top: -50px;
-    color: #3A424A;
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
-    font-weight: bolder;
-    font-size: 300px;
-    opacity: 0.4;
+  position: relative;
+  margin-top: -50px;
+  color: #3a424a;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace,
+    "Lucida Console", Monaco;
+  font-weight: bolder;
+  font-size: 300px;
+  opacity: 0.4;
 }
 
 #subtitle {
-    position: fixed;
-    height: 50px;
-    width: 550px;
-    top: 300px;
-    left: 50%;
-    margin-left: -275px;
-    text-align: center;
+  position: fixed;
+  height: 50px;
+  width: 550px;
+  top: 300px;
+  left: 50%;
+  margin-left: -275px;
+  text-align: center;
 }
 
 #subtitle p {
-    font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace, "Lucida Console", Monaco;
-    font-weight: bolder;
-    font-size: 35px;
-    letter-spacing: 5px;
-    color: white;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace,
+    "Lucida Console", Monaco;
+  font-weight: bolder;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: white;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-    #logo {
-        top: 150px;
-        height: 80px;
-    }
-    
-    #title {
-        height: 600px;
-        width: 650px;
-        top: 550px;
-        margin-left: -325px;
-    }
-    
-    #title p {
-        font-size: 350px;
-    }
-    
-    #subtitle {
-        height: 100px;
-        width: 650px;
-        top: 630px;
-        margin-left: -325px;
-        text-align: center;
-    }
-    
-    #subtitle p {
-        font-size: 45px;
-    }
+  #logo {
+    top: 150px;
+    height: 80px;
+  }
+
+  #title {
+    height: 600px;
+    width: 650px;
+    top: 550px;
+    margin-left: -325px;
+  }
+
+  #title p {
+    font-size: 350px;
+  }
+
+  #subtitle {
+    height: 100px;
+    width: 650px;
+    top: 630px;
+    margin-left: -325px;
+    text-align: center;
+  }
+
+  #subtitle p {
+    font-size: 45px;
+  }
 }
