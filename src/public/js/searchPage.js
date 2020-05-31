@@ -91,10 +91,10 @@ $.ajax({
 
       let subtitle = document.createElement("p");
       addClasses(subtitle, ["res-el", "res-sub"]);
-      subtitle.textContent = `${currentChunk.link} > ${currentChunk.sub}`;
+      subtitle.textContent = `${currentChunk.domain} > ${currentChunk.sub}`;
 
       let mainAnchor = document.createElement("a");
-      mainAnchor.href = currentChunk.url;
+      mainAnchor.href = currentChunk.link;
       mainAnchor.className = "res-link";
       mainAnchor.appendChild(title);
       mainAnchor.appendChild(subtitle);
