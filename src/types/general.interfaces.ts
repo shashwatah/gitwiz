@@ -4,8 +4,18 @@ export interface MainQueryData {
   data: object;
 }
 
-//This will be changed later when the data will be processed on the frontend instead
+export interface Tag {
+    type: string,
+    icon: boolean,
+    content: string | number
+}
+
 export interface ProcessedData {
-  platform: string;
-  htmlString: string;
+    platform: string,
+    link: string,
+    name: string,
+    domain: string,
+    sub: string,
+    desc: string,
+    tags: Array<Tag>
 }
