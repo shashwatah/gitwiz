@@ -1,43 +1,48 @@
 import fetch from "node-fetch";
-import { MainQueryData } from './../types/general.interfaces';
+import { MainQueryData } from "./../types/general.interfaces";
 
 export default class QueryController {
-    private url: string;
-    private token: string;
-    
-    constructor(url: string, token: string) {
-        this.url = url;
-        this.token = token;
-    }
+  private url: string;
+  private token: string;
 
-    fetchData(queryString: string): Promise<object>{
-        return new Promise(async (resolve, reject) => {
-            await fetch(this.url, {
-                method: 'POST',
-                headers: {
-                    'Authorization': `token ${this.token}`,
-                    'Content-Type': 'application/json'
-                }, 
-                body: JSON.stringify({
-                    query: queryString
-                })
-            })
-            .then(async response => await response.json())
-            .then(response => {
-                if(response.data) {
-                    const queryData: MainQueryData = {
-                        message: "success",
-                        data: response.data
-                    }
-                    resolve(queryData);
-                } else if(response.errors[0]) {
-                    throw new Error(`QueryControllerError/fetchData(): ${response.errors[0].message}`);
-                } else {
-                    throw new Error("QueryControllerError/fetchData(): Error retrieving data");
-                }
-            }).catch(error => {
-                reject(error);
-            });
-        }); 
-    }
+  constructor(url: string, token: string) {
+    this.url = url;
+    this.token = token;
+  }
+
+  fetchData(queryString: string): Promise<object> {
+    return new Promise(async (resolve, reject) => {
+      await fetch(this.url, {
+        method: "POST",
+        headers: {
+          Authorization: `token ${this.token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query: queryString,
+        }),
+      })
+        .then(async (response) => await response.json())
+        .then((response) => {
+          if (response.data) {
+            const queryData: MainQueryData = {
+              message: "success",
+              data: response.data,
+            };
+            resolve(queryData);
+          } else if (response.errors[0]) {
+            throw new Error(
+              `QueryControllerError/fetchData(): ${response.errors[0].message}`
+            );
+          } else {
+            throw new Error(
+              "QueryControllerError/fetchData(): Error retrieving data"
+            );
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  }
 }
