@@ -28,6 +28,7 @@
     "helmet": "^3.22.0",
     "mongoose": "^5.9.13",
     "morgan": "^1.10.0",
+    "node-cache": "^5.1.0",
     "node-fetch": "^2.6.0",
     "npm": "^6.14.5"
   },
