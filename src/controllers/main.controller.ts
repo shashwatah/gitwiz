@@ -1,6 +1,6 @@
 import { GITHUB_TOKEN, GITLAB_TOKEN } from "./../utils/env";
 
-import NodeCache from 'node-cache';
+import NodeCache from "node-cache";
 
 import GithubController from "./github.controller";
 import GitlabController from "./gitlab.controller";
@@ -24,14 +24,16 @@ export default class MainController {
 
   getResults(): Promise<Array<ProcessedData>> {
     return new Promise(async (resolve, reject) => {
-      let cachedData: Array<ProcessedData> | undefined = this.cache.get(this.query);
+      let cachedData: Array<ProcessedData> | undefined = this.cache.get(
+        this.query
+      );
 
-      if(cachedData === undefined) {
+      if (cachedData === undefined) {
         const [githubResults, gitlabResults] = await Promise.all([
           this.githubController.processData(),
           this.gitlabController.processData(),
         ]);
-  
+
         const resultArray: Array<ProcessedData> = githubResults
           .slice(0, 20)
           .concat(shuffleArray(githubResults.slice(20).concat(gitlabResults)));
@@ -40,9 +42,9 @@ export default class MainController {
         } else {
           reject("MainQueryController/getResults(): Query returned 0 results");
         }
-        
+
         this.cache.set(this.query, resultArray);
-        
+
         resolve(resultArray);
       } else {
         resolve(cachedData);
