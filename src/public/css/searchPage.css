@@ -262,6 +262,11 @@ body {
   width: 10px;
 }
 
+.octicon-lang {
+  height: 16px ;
+  width: 16px;
+}
+
 #snackbar {
   position: relative;
   background-color: #24292e;
@@ -439,6 +444,11 @@ body {
   .octicon-branch {
     height: 32px;
     width: 20px;
+  }
+
+  .octicon-lang {
+    height: 32px ;
+    width: 32px;
   }
 
   #snackbar {

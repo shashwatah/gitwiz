@@ -63,8 +63,8 @@ export default class GithubController {
                   for (const lang of edge.node.languages.nodes) {
                     tags.push({
                       type: "language",
-                      icon: false,
-                      content: lang.name.toUpperCase(),
+                      icon: true,
+                      content: lang.name,
                     });
                   }
                 }
