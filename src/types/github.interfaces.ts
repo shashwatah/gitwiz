@@ -19,7 +19,6 @@ export interface DataEdge {
     name: string;
     nameWithOwner: string;
     url: string;
-    homepageUrl: string;
     description: string | null;
     parent?: {
       nameWithOwner: string;
@@ -39,7 +38,6 @@ export interface DataEdge {
       totalCount: number;
     };
     diskUsage: number;
-    createdAt: string;
     repositoryTopics: {
       nodes: Array<{
         topic: {

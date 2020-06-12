@@ -22,7 +22,7 @@ export default class GithubController {
         .fetchData(
           `query { rateLimit { cost remaining resetAt } search(query: \"${encodeURI(
             this.query
-          )}\", type: REPOSITORY, first: 100) { repositoryCount edges { node { ... on Repository { name nameWithOwner url homepageUrl description parent { nameWithOwner } languages(first:5) { nodes { name } } releases(last:1) { nodes { tagName } } forkCount stargazers { totalCount } diskUsage createdAt repositoryTopics(first:10) { nodes { topic { name } } } } } } } }`
+          )}\", type: REPOSITORY, first: 100) { repositoryCount edges { node { ... on Repository { name nameWithOwner url description parent { nameWithOwner } languages(first:5) { nodes { name } } releases(last:1) { nodes { tagName } } forkCount stargazers { totalCount } diskUsage repositoryTopics(first:10) { nodes { topic { name } } } } } } } }`
         )
         .then((response: QueryData) => {
           if (response.rateLimit?.remaining === 0) {
