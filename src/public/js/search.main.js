@@ -1,3 +1,10 @@
+import snackbarController from "./utils/snackbar.controller.js";
+
+let langColors;
+$.getJSON("./js/data/langColors.json", function (data) {
+  langColors = data;
+});
+
 const logoImg = document.getElementById("topbar-logo");
 const resContainer = document.getElementById("res-container");
 const queryInfoContainer = document.getElementById("query-info-container");
@@ -43,7 +50,10 @@ const addClasses = function (element, classArr) {
   });
 };
 
-logoImg.src = mobileCheck() === true ? "images/icon.webp" : "images/logo.webp";
+if (logoImg) {
+  logoImg.src =
+    mobileCheck() === true ? "images/icon.webp" : "images/logo.webp";
+}
 
 $(window).on("scroll", function () {
   if (Math.round($(window).scrollTop()) > 400) {
@@ -118,7 +128,7 @@ $.ajax({
           if (tag.type === "language") {
             tagBtn.innerHTML = `${icons[tag.type].replace(
               "colorCode",
-              colors[tag.content].color
+              langColors[tag.content].color
             )} ${tag.content}`;
           } else {
             tagBtn.innerHTML = `${icons[tag.type]} ${tag.content}`;
@@ -139,6 +149,6 @@ $.ajax({
   },
   error: function (err) {
     resContainer.innerHTML = "";
-    snackbarController(err.responseText);
+    snackbarController.init(err.responseText);
   },
 });

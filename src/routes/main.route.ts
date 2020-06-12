@@ -6,13 +6,13 @@ import { cache } from "../utils/cache";
 const router: express.Router = express.Router();
 
 router.get("/", (req: express.Request, res: express.Response) => {
-  res.status(200).render("indexPage", {
+  res.status(200).render("index", {
     layout: false,
   });
 });
 
 router.get("/search", (req: express.Request, res: express.Response) => {
-  res.status(200).render("searchPage", {
+  res.status(200).render("search", {
     query: req.query.query,
     layout: false,
   });

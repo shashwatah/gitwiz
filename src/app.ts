@@ -33,7 +33,7 @@ app.use(router);
 
 app.use(
   (req: express.Request, res: express.Response, next: express.NextFunction) => {
-    res.status(404).render("404Page", {
+    res.status(404).render("notfound", {
       layout: false,
     });
   }

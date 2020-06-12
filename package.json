@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "buildFront": "webpack --config webpack-front.config.js"
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,9 @@
     "nodemon": "^2.0.3",
     "prettier": "2.0.5",
     "ts-node": "^8.10.1",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "engines": {
     "node": "^10.15.3"
