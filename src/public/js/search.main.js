@@ -1,7 +1,7 @@
 import snackbarController from "./utils/snackbar.controller.js";
 
 let langColors;
-$.getJSON("./js/data/langColors.json", function (data) {
+$.getJSON("./data/langColors.json", function (data) {
   langColors = data;
 });
 
