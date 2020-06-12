@@ -25,7 +25,7 @@ export default class MainController {
   getResults(): Promise<Array<ProcessedData>> {
     return new Promise(async (resolve, reject) => {
       let cachedData: Array<ProcessedData> | undefined = this.cache.get(
-        this.query
+        this.query.toLowerCase()
       );
 
       if (cachedData === undefined) {
