@@ -27,9 +27,9 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
   <a href="#run--build">Run & Build</a> •
   <a href="#deployment">Deployment</a> •
   <a href="#contribution">Contribution</a> •
+  <a href="#libraries--apis">Libraries & APIs</a> •
   <a href="#authors">Authors</a> •
-  <a href="#license">License</a> •
-  <a href="#libraries--apis">Libraries & APIs</a>
+  <a href="#license">License</a>
 </p>
 
 <img alt="Gif" src="https://raw.githubusercontent.com/KSSBro/gitwiz/master/src/public/images/other/gitwiz.gif">
