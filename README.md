@@ -111,6 +111,12 @@ Build the app(Compile TypeScript to JavaScript) with the following command:
 $ npm run build
 ```
 
+Bundle the frontend: 
+
+```
+$ npm run buildFront
+```
+
 ## Deployment 
 
 GitWiz is currently deployed on Heroku.
