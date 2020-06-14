@@ -34,13 +34,6 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
 
 <img alt="Gif" src="https://raw.githubusercontent.com/KSSBro/gitwiz/master/src/public/images/other/gitwiz.gif">
 
-## Platforms
-
-GitWiz currently supports the following version control platforms: 
-
-- GitHub
-- GitLab
-
 ## Prerequisites
 
 - Git is need to clone repository on your machine.
@@ -128,6 +121,18 @@ Click [here](https://gitwiz.herokuapp.com) to visit.
 
 Fork the repository and open a pull request to contribute.
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Libraries/APIs
+
+### Libraries
+
+- [ptarjan/node-cache](https://github.com/ptarjan/node-cache)
+- [ozh/github-colors](https://github.com/ozh/github-colors)
+
+### APIs:
+
+- [Github GraphQL API](https://developer.github.com/v4/)
+- [Gitlab GraphQL API](https://docs.gitlab.com/ee/api/graphql/)
 
 ## Authors
 
