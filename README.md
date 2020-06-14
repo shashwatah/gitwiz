@@ -21,7 +21,6 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
 </p>
 
 <p align="center">
-  <a href="#platforms">Platforms</a> •
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#installation">Installation</a> •
   <a href="#configuration">Configuration</a> •
@@ -29,7 +28,8 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
   <a href="#deployment">Deployment</a> •
   <a href="#contribution">Contribution</a> •
   <a href="#authors">Authors</a> •
-  <a href="#license">License</a>
+  <a href="#license">License</a> •
+  <a href="#libraries--apis">Libraries & APIs</a>
 </p>
 
 <img alt="Gif" src="https://raw.githubusercontent.com/KSSBro/gitwiz/master/src/public/images/other/gitwiz.gif">
@@ -122,9 +122,9 @@ Click [here](https://gitwiz.herokuapp.com) to visit.
 Fork the repository and open a pull request to contribute.
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Libraries/APIs
+## Libraries & APIs
 
-### Libraries
+### Libraries:
 
 - [ptarjan/node-cache](https://github.com/ptarjan/node-cache)
 - [ozh/github-colors](https://github.com/ozh/github-colors)
