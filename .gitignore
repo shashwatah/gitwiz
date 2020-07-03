@@ -1,3 +1,4 @@
 node_modules
 local
 .env
+src/public/js/search.bundled.js
