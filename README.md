@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://gitwiz.herokuapp.com"><img src="https://github.com/KSSBro/gitwiz/blob/master/src/public/images/png/icon.png" alt="GitWiz" width="200"></a>
+  <a href="https://gitwiz.herokuapp.com"><img src="https://github.com/Araekiel/gitwiz/blob/master/src/public/images/png/icon.png" alt="GitWiz" width="200"></a>
   <br>
   GitWiz
   <br>
@@ -32,7 +32,7 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
   <a href="#license">License</a>
 </p>
 
-<img alt="Gif" src="https://raw.githubusercontent.com/KSSBro/gitwiz/master/src/public/images/other/gitwiz.gif">
+<img alt="Gif" src="https://raw.githubusercontent.com/Araekiel/gitwiz/master/src/public/images/other/gitwiz.gif">
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ $ npm --version
 Clone the repo and cd into the directory: 
 
 ```
-$ git clone https://github.com/KSSBro/gitwiz.git
+$ git clone https://github.com/Araekiel/gitwiz.git
 $ cd gitwiz 
 ```
 
