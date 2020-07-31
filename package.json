@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KSSBro/gitwiz.git"
+    "url": "git+https://github.com/Araekiel/gitwiz.git"
   },
-  "author": "KSSBro",
+  "author": "Araekiel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KSSBro/gitwiz/issues"
+    "url": "https://github.com/Araekiel/gitwiz/issues"
   },
-  "homepage": "https://github.com/KSSBro/gitwiz#readme",
+  "homepage": "https://github.com/Araekiel/gitwiz#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
