@@ -142,7 +142,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Authors
 
-- **KSSBro** - [Github](https://github.com/KSSBro)
+- **Araekiel** - [Github](https://github.com/Araekiel)
 
 ## License
 
