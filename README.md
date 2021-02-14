@@ -132,7 +132,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### Libraries:
 
-- [ptarjan/node-cache](https://github.com/ptarjan/node-cache)
+- [node-cache/node-cache](https://github.com/node-cache/node-cache)
 - [ozh/github-colors](https://github.com/ozh/github-colors)
 
 ### APIs:
