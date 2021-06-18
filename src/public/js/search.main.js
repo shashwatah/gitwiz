@@ -1,9 +1,5 @@
 import snackbarController from "./utils/snackbar.controller.js";
-
-let langColors;
-$.getJSON("./data/langColors.json", function (data) {
-  langColors = data;
-});
+import langColors from './data/colors.js';
 
 const logoImg = document.getElementById("topbar-logo");
 const resContainer = document.getElementById("res-container");
