@@ -35,9 +35,9 @@
     <div class="page-el" id="snackbar">
         <p id="snackbar-text">An error occured while looking for what you entered.</p>
     </div>
-    <script>const query = `{{query}}`</script>
+    <script>const query = `{{query}}`.trim();</script>
     <script src="js/utils/jquery.js"></script>
-    <script src="js/search.bundled.js"></script>
+    <script src="js/search.bundled.js" type="module"></script>
 </body>
 
 </html>
