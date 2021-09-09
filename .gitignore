@@ -1,4 +1,8 @@
 node_modules
 local
+dist
+
 .env
+
 src/public/js/search.bundled.js
+src/public/js/data/colors.js
