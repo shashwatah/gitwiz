@@ -36,7 +36,7 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
 
 ## Prerequisites
 
-- Git is need to clone repository on your machine.
+- Git is need to clone the repository on your machine.
 - npm is needed to install packages.
 - Node.js is needed to run GitWiz.
 
