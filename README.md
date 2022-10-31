@@ -13,7 +13,7 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
 </h4>
 
 <p align="center">
-  <a><img alt="MIT License" src="https://img.shields.io/apm/l/atomic-design-ui.svg?"></a>
+  <a><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-green"></a>
   <a><img alt="Github Release" src="https://img.shields.io/badge/release-v1.2-blue"></a>
   <a href="http://makeapullrequest.com">
     <img alt="PRs Welcome"src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat">
@@ -144,8 +144,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Authors
 
-- [**araekiel**](https://github.com/araekiel)
+- **araekiel** - [Github](https://github.com/araekiel)
 
 ## License
 
-[MIT License](https://github.com/araekiel/gitwiz/blob/master/LICENSE) | Copyright (c) 2020 Kumar Shashwat
+[MIT License](https://github.com/araekiel/gitwiz/blob/master/LICENSE) | Copyright (c) 2022 Kumar Shashwat
