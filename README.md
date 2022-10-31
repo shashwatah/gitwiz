@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://gitwiz.herokuapp.com"><img src="https://github.com/araekiel/gitwiz/blob/master/src/public/images/png/icon.png" alt="GitWiz" width="200"></a>
+  <a href="https://gitwiz.herokuapp.com"><img src="https://github.com/araekiel/gitwiz/blob/main/src/public/images/png/icon.png" alt="GitWiz" width="200"></a>
   <br>
   GitWiz
   <br>
@@ -70,7 +70,7 @@ $ npm --version
 Clone the repo and cd into the directory: 
 
 ```bash
-$ git clone https://github.com/Araekiel/gitwiz.git
+$ git clone https://github.com/araekiel/gitwiz.git
 $ cd gitwiz 
 ```
 
@@ -123,6 +123,8 @@ GitWiz is currently deployed on Heroku.
 <br/>
 Click [here](https://gitwiz.herokuapp.com) to visit.
 
+> Heroku is discontinuing its free tier on November 28, 2022, following which this deployment will not be available.
+
 ## Contribution
 
 Fork the repository and open a pull request to contribute.
@@ -142,8 +144,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Authors
 
-- **Araekiel** - [Github](https://github.com/Araekiel)
+- [**araekiel**](https://github.com/araekiel)
 
 ## License
 
-[MIT License](https://github.com/Araekiel/gitwiz/blob/master/LICENSE) | Copyright (c) 2020 Kumar Shashwat
+[MIT License](https://github.com/araekiel/gitwiz/blob/master/LICENSE) | Copyright (c) 2020 Kumar Shashwat
