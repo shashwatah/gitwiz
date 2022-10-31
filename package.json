@@ -29,7 +29,7 @@
     "helmet": "^3.22.0",
     "morgan": "^1.10.0",
     "node-cache": "^5.1.0",
-    "node-fetch": "^3.1.1",
+    "node-fetch": "^3.2.10",
     "npm": "^8.19.2"
   },
   "devDependencies": {
