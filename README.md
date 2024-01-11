@@ -118,7 +118,7 @@ GitWiz is currently deployed on Heroku.
 <br/>
 Click [here](https://gitwiz.herokuapp.com) to visit.
 
-> Heroku discontinued its free tier on November 28, 2022,as such this deployment is not available anymore.
+> Heroku discontinued its free tier on November 28, 2022, as such this deployment is not available anymore.
 
 ## Refs
 
