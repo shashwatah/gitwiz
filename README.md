@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://gitwiz.herokuapp.com"><img src="https://github.com/araekiel/gitwiz/blob/main/src/public/images/png/icon.png" alt="GitWiz" width="200"></a>
+  <img src="https://raw.githubusercontent.com/shashwatah/gitwiz/main/src/public/images/png/icon.png" alt="GitWiz" width="200">
   <br>
   GitWiz
   <br>
@@ -13,11 +13,8 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
 </h4>
 
 <p align="center">
-  <a><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-green"></a>
-  <a><img alt="Github Release" src="https://img.shields.io/badge/release-v1.2-blue"></a>
-  <a href="http://makeapullrequest.com">
-    <img alt="PRs Welcome"src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat">
-  </a>
+  <a href="LICENSE"><img alt="Release" src="https://img.shields.io/badge/license-MIT-green"></a>  
+  <a href="https://github.com/shashwatah/gitwiz/releases/tag/v1.2"><img alt="Github Release" src="https://img.shields.io/badge/release-v1.2-blue"></a>
 </p>
 
 <p align="center">
@@ -26,13 +23,11 @@ Built with <a href="https://nodejs.org/en/">Node.js</a>, <a href="https://www.ty
   <a href="#configuration">Configuration</a> •
   <a href="#run--build">Run & Build</a> •
   <a href="#deployment">Deployment</a> •
-  <a href="#contribution">Contribution</a> •
   <a href="#refs">Refs</a> •
-  <a href="#authors">Authors</a> •
   <a href="#license">License</a>
 </p>
 
-<img alt="Gif" src="https://raw.githubusercontent.com/araekiel/gitwiz/master/src/public/images/other/gitwiz.gif">
+<img alt="Gif" src="https://raw.githubusercontent.com/shashwatah/gitwiz/master/src/public/images/other/gitwiz.gif">
 
 ## Prerequisites
 
@@ -70,7 +65,7 @@ $ npm --version
 Clone the repo and cd into the directory: 
 
 ```bash
-$ git clone https://github.com/araekiel/gitwiz.git
+$ git clone https://github.com/shashwatah/gitwiz.git
 $ cd gitwiz 
 ```
 
@@ -123,29 +118,20 @@ GitWiz is currently deployed on Heroku.
 <br/>
 Click [here](https://gitwiz.herokuapp.com) to visit.
 
-> Heroku is discontinuing its free tier on November 28, 2022, following which this deployment will not be available.
-
-## Contribution
-
-Fork the repository and open a pull request to contribute.
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+> Heroku discontinued its free tier on November 28, 2022,as such this deployment is not available anymore.
 
 ## Refs
 
-### Libraries:
+#### Libraries:
 
 - [node-cache/node-cache](https://github.com/node-cache/node-cache)
 - [ozh/github-colors](https://github.com/ozh/github-colors)
 
-### APIs:
+#### APIs:
 
 - [Github GraphQL API](https://developer.github.com/v4/)
 - [Gitlab GraphQL API](https://docs.gitlab.com/ee/api/graphql/)
 
-## Authors
-
-- **araekiel** - [Github](https://github.com/araekiel)
-
 ## License
 
-[MIT License](https://github.com/araekiel/gitwiz/blob/master/LICENSE) | Copyright (c) 2022 Kumar Shashwat
+[MIT License](https://github.com/shashwatah/gitwiz/blob/master/LICENSE) | Copyright (c) 2024 Kumar Shashwat
