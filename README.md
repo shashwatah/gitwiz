@@ -114,11 +114,9 @@ $ npm run buildFront
 
 ## Deployment 
 
-GitWiz is currently deployed on Heroku.
+GitWiz is currently deployed on Render.
 <br/>
-Click [here](https://gitwiz.herokuapp.com) to visit.
-
-> Heroku discontinued its free tier on November 28, 2022, as such this deployment is not available anymore.
+Click [here](https://gitwiz.onrender.com/) to visit.
 
 ## Refs
 

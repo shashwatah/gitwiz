@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Araekiel/gitwiz.git"
+    "url": "git+https://github.com/shashwatah/gitwiz.git"
   },
-  "author": "Araekiel",
-  "license": "ISC",
+  "author": "shashwatah",
+  "license": "mit",
   "bugs": {
-    "url": "https://github.com/Araekiel/gitwiz/issues"
+    "url": "https://github.com/shashwatah/gitwiz/issues"
   },
-  "homepage": "https://github.com/Araekiel/gitwiz#readme",
+  "homepage": "https://github.com/shashwatah/gitwiz#readme",
   "dependencies": {
     "body-parser": "^1.20.1",
     "compression": "^1.7.4",
